@@ -94,109 +94,17 @@
 
 \chapter{Introduction}
 
-\section{M Dwarfs: The Silent Majority}
-For much of the timescale of stellar astrophysics research, to a fanatic 
-of M dwarf stars their history is a story of neglect and underappreciation.
-The first spectrum of an M dwarf was obtained only 100 years ago when 
-\citet{Adams13} collected an observation of the M+M binary Groombridge 34.
-The oldest known surviving diagram plotting stellar absolute magnitude against spectral type \citep{Russell14}, now known as a Hertsprung-Russell Diagram, includes hundreds of stars, as shown in Figure \ref{fig:HR}.
-Today we know that M dwarfs make up approximately 75\% of the stars in the galaxy,
-yet only $\sim$5\% of the stars included in Russell's figure are listed as
-spectral type M.
+\section{Why Ben gets a PhD}
 
+PhDs are for awesome people \cite{I got's me one}. The awesome of Ben ($A_{ben}$) is defined by
 
-
-\begin{figure}[hbt!]
-\centering
-\includegraphics[width=.5\textwidth]{hr.png}
-\caption{\btmtodo{This is a figure}}
-\label{fig:HR}
-\index{Example Figure}
-\end{figure}
-
-Russell and others hold no personal grudge against M dwarfs, the prolem is the physics
-of M dwarfs themselves.
-To show this, let us begin with the equations of stellar structure.
-The first of these declares a star is in hydrostatic equilibrium:
-\begin{equation}
-\frac{\d P(r)}{\d r} = - \frac{ G m \rho}{r^2 },
-\label{eq:hydro}
-\end{equation}
-where $P(r)$ is the pressure exerted on a particle at a radius $r$, $G$ is Newton's
-constant, $m$ the mass enclosed inside the radius $r$, and $\rho$ the stellar density,
-itself a function of radius as well.
-
-The second equation defines mass conservation:
-\begin{equation}
-\frac{\d m(r)}{\d r} = 4 \pi r^2 \rho,
-\end{equation}
-where $\pi$ is the ratio of a circle's circumference to its diameter,
-and all other variables retain their meaning from Equation \ref{eq:hydro}.
-
-The third equation defines energy transport:
-\begin{equation}
-\frac{\d L(r)}{\d r} = 4 \pi r^2 \rho \epsilon,
-\end{equation}
-where $L$ is the energy leaving a spherical shell of radius $r$, produced by the
-material in the star interior to $r$ and $\epsilon$ is the energy released per unit
-mass per second inside the star.
-
-The final equation defines the temperature gradient inside a star. 
-The exact form of this equation depends on the method for which energy is transported
-inside the star.
-For radiative transport, the temperature gradient is
-\begin{equation}
-\frac{\d T}{\d r} = - \frac{3}{4ac} \frac{\bar{\kappa} \rho}{T^3} \frac{L}{4\pi r^2}.
-\end{equation}
-Here, $T$ is the temperature of the star at a radius $r$, $ac$ is the radiation constant multiplied by the speed of light, also equal to four times the Stefan-Boltzmann
-constant, and $\bar{\kappa}$ the mean opacity of the material.
-
-Very low-mass stars are fully convective, not radiative, and therefore follow
-a different limit:
-\begin{equation}
-\frac{\d T}{\d r} =  \bigg( 1 - \frac{1}{\gamma}\bigg)\frac{T}{P}\frac{\d P(r)}{\d r},
-\end{equation}
-where $\gamma$ is the adiabatic index, and is $5/3$ for a monatomic ideal gas,
-and all other terms retain their previous meaning.
-
-Let us consider two other proportionalities. First, we assume that the energy generation rate
-inside a star is a function of its temperature and density:
-\begin{equation}
-\epsilon = \epsilon_0 \rho T^\nu
-\end{equation}
-where $\nu$ depends on the particular fusion pathway that is dominant in the core of
-the star.
-Second, we assume that the ideal gas law holds:
-\begin{equation}
-P \propto \rho T.
-\end{equation}
-
-With these six equations, we can develop a series of homology relations. We can create
-a series of five linear equations with five unknown parameters: $\log T$, $\log P$, 
-$\log R$, $\log \rho$, and $\log M$.
-Ignoring constant terms and considering only the adiabatic case (as for fully 
-convective stars),
 \begin{align}
-\log P &= 2 \log M - 4 \log R \nonumber \\
-\log \rho &= \log M - 3 \log R \nonumber \\
-\log P &= \gamma \log \rho \\
-\log T &= \bigg(\frac{\gamma - 1}{\gamma}\bigg) \log P \nonumber \\
-\log L &= \log \rho + \nu \log T + \log M \nonumber.
-\label{eq:system}
+A_{ben} $= A_0^{\infty}
 \end{align}
-We can rearrange these to solve for $\log M$, finding
-\log \R = \bigg(\frac{2-\gamma}{4 - 3\gamma}\bigg) \log M,
-which we can then insert into the final equation in Equation \ref{eq:system}, finding
 
+Where $A_0$ is normalized to Tony Stark and expressed in SI units of Fonzarelli's \cite{https://en.wikipedia.org/wiki/Fonzie}.
 
-Start off all chapters with \verb|chapter|. \index{chapter!numbered} \verb|\extrachapter| will give you an unnumbered chapter that's added to the Table of Contents. \index{chapter!unnumbered}
-
-Here's an example of a citation \citep{GMP81}. Here's another \citep{PP98}. These will appear in the big bibliography at the end of the thesis.
-\index{bibliography}
-
-If you're new to \LaTeX{} and would like to begin by learning the basics, please see our free online course available at:\\ \url{https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-1} \index{LaTeX@\LaTeX}
-
-You can define nomenclatures \index{nomenclature} as you talk about key terms in your thesis. So what's a galaxy? %\nomenclature{Galaxy}{A system of stars independent from all other systems}
+Thus, Ben get's a PhD! QED
 
 
 \section{This is a Section}
