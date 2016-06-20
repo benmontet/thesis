@@ -182,11 +182,48 @@ convective stars),
 \log P &= \gamma \log \rho \\
 \log T &= \bigg(\frac{\gamma - 1}{\gamma}\bigg) \log P \nonumber \\
 \log L &= \log \rho + \nu \log T + \log M \nonumber.
-\label{eq:system}
 \end{align}
 We can rearrange these to solve for $\log M$, finding
-\log \R = \bigg(\frac{2-\gamma}{4 - 3\gamma}\bigg) \log M,
-which we can then insert into the final equation in Equation \ref{eq:system}, finding
+\begin{equation}
+\log R = \bigg(\frac{2-\gamma}{4 - 3\gamma}\bigg) \log M,
+\end{equation}
+which we can then insert into the final equation in Equation 1.8.
+This manipulation yields
+\begin{equation}
+\log L = \bigg(\frac{2(\nu + 1) - \gamma(2\nu + 3)}{4 - 3\gamma}\bigg) \log M,
+\end{equation}
+which if we consider the case where we have an ideal, fully ionized gas so that $\gamma = 5/3$ and energy generation dominated by the p-p chain so that $\nu = 4$, we find
+\begin{equation}
+\log L \approx 8.33 \log M
+\end{equation}
+or $L \propto M^{8.33}$! Thus, if we decrease the mass of a fully convective star by a factor of two, 
+we also decrease its luminosity by a factor of 320!\footnote{The same manipulation,
+considering the case of radiative transport, leads to the relation $L~\propto~M^{5.5}$,
+similar to what is observed for Sun-like stars.} 
+
+Even worse for optical observing,
+the peak of the SED of a typical 3,000 K M dwarf peaks at 1 micron, well into the infrared, making them even fainter in the optical.
+Even though M dwarfs make up 70\% of the nearest stars, with 250 of them located within
+10 pc of the Sun \citep[e.g.][]{Henry06}, there are no M dwarfs visible to the naked 
+eye.
+The brighest, HIP\,105090, is only $3.95 \pm 0.01$ pc from the Sun, yet has an apparent V-band magnitude of 6.76 \citep{vanLeeuwen07}.
+With so many bright solar-type stars in the solar neighborhood, it is easy to understand why M dwarfs have been overlooked for so long, and why even today they
+are often overlooked in searches for companions.
+
+\section{Radial Velocity Planet Searches}
+
+
+\section{Transiting Planets}
+
+\section{Understanding M Dwarfs}
+
+\btmtodo{Talk about M+M binaries here}
+
+\section{Brown Dwarfs}
+\btmtodo{Say something about irradiation here---M dwarfs are nice!}
+
+\section{Goals of this Thesis} 
+
 
 
 Start off all chapters with \verb|chapter|. \index{chapter!numbered} \verb|\extrachapter| will give you an unnumbered chapter that's added to the Table of Contents. \index{chapter!unnumbered}
@@ -242,6 +279,7 @@ Here's an endnote.\endnote{Endnotes are notes that you can use to explain text i
 
 %\printbibliography[heading=subbibliography]
 %\end{refsection}
+\btmtodo{This is the Dynamical Masses TTV paper}
 
 
 \chapter{This is the Third Chapter}
@@ -250,11 +288,30 @@ Here's an endnote.\endnote{Endnotes are notes that you can use to explain text i
 
 [You can have chapters that were published as part of your thesis. The text style of the body should be single column, as it was submitted to the publisher, not formatted as the publisher did.]
 
+\btmtodo{This is TRENDS IV}
+
 \chapter{This is the Fourth Chapter}
+
+\btmtodo{This is LHS Part 1}
 \chapter{This is the Fifth Chapter}
+
+\btmtodo{This is LHS Part II}
+
 \chapter{This is the Sixth Chapter}
+
+\btmtodo{This is the M+M binary work}
+
 \chapter{This is the Seventh Chapter}
+
+\btmtodo{This is the K2 planet catalog}
+
 \chapter{This is the Eighth Chapter}
+
+\btmtodo{This is WFIRST}
+
+\chapter{This is the Ninth Chapter}
+
+\btmtodo{This is the summary and future directions}
 
 \printbibliography[heading=bibintoc]
 %\bibliography{exopapers}
