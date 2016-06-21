@@ -33,6 +33,16 @@
 \newcommand{\btmtodo}[1]{\todo{BEN}{red}{#1}}
 
 \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+\newcommand{\rsun}{{R$_\odot$}}
+\newcommand{\msun}{{M$_\odot$}}
+\newcommand{\rstar}{{R$_*$}}
+\newcommand{\mstar}{{M$_*$}}
+
+\newcommand{\aj}{AJ}
+\newcommand{\pasp}{PASP}
+\newcommand{\apj}{ApJ}
+\newcommand{\sci}{Science}
+\newcommand{\nat}{Nature}
 
 
 % Name of your .bib file(s)
@@ -109,9 +119,8 @@ spectral type M.
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=.5\textwidth]{hr.png}
-\caption{\btmtodo{This is a figure}}
+\caption[Russell's original H-R Diagram]{\btmtodo{This is a figure}}
 \label{fig:HR}
-\index{Example Figure}
 \end{figure}
 
 Russell and others hold no personal grudge against M dwarfs, the prolem is the physics
@@ -232,6 +241,55 @@ what's the best place to search? Mike Bottom's paper.
 Planets in wide orbits: motivate TRENDS survey.
 
 \section{Transiting Planets}
+\subsection{Why bother? \btmtodo{Don't call it this}}
+If a planetary system is aligned in such a way that the planets pass between our
+viewing position in the solar system and the star itself, they will appear to pass
+across (or transit) the stellar disk during their orbit.
+We can not resolve the surface of the star in order to image the transit itself, but
+we can still detect it. 
+During the transit, a portion of the stellar disk is blocked, decreasing the observed
+flux from the star. 
+The size of this decrement, termed $\delta$, corresponds to the fractional area of the star's disk blocked by the planet:
+\begin{equation}
+\delta = \bigg(\frac{R_p}{R_*}\bigg)^2.
+\end{equation}
+Again, we find that we must understand the star's parameters (in this case, the radius)
+in order to understand the planetary parameters.
+
+Detecting planets with the transit method is more limited relative to the RV method:
+only a small fraction of all planets will be directly detectable. 
+Any planets not in nearly edge-on orbits will be missed in a transit search.
+In addition, transit photometry provides precise information about the location 
+of a planet, but only at one point of its orbit.
+Even in cases where information about the eccentricity can be inferred from the
+transit itself \btmtodo{Cite: Dawson and Johnson}, there is still a degeneracy
+between the eccentricity and argument of periastron which can not be broken without
+additional information.
+
+On the other hand, there are a few key advantages in transit searches relative to 
+RV surveys. 
+\btmtodo{1, search more types of stars---higher masses. 2, measure radii directly,
+not m sin i. 3, can understand atmospheres---and cite Heather's papers!!!}
+
+
+\btmtodo{Motivate TTV systems here as well}
+
+
+\subsection{History of Transit Searches}
+The first transiting planet detected was a giant planet orbiting HD\,209458 
+\btmtodo{Cite: Charbonneau, Henry}. 
+This planet, a hot Jupiter, has a radius of $1.14 \pm 0.06$ \rsun\ and an orbital 
+period of 3.52 days.
+The planet was already known to exist from RV surveys, and had a measured $m \sin i$.
+Detection of the transit provided a measurement of the inclination, enabling a 
+direct measurement of the mass; the transit detection made it the first planet outside our solar system with a directly measured mass and radius.
+
+Shortly after came the first discovery of a planet via transit, OGLE-TR-56b \btmtodo{Cite} from the Optical Gravitational Lensing Experiment (OGLE) mission.
+The primary goal of OGLE is to detect dark matter through microlensing, but it has also discovered 
+many planets via microlensing \btmtodo{Cite}.
+Microlensing surveys are also ideal for the discovery of transiting planets, as 
+I discuss in Chapter \ref{chap:wfirst}.
+
 
 
 \section{Understanding M Dwarfs}
@@ -252,24 +310,18 @@ but still not great}
 \btmtodo{See Drew's thesis for tips on formatting previous papers section}
 
 
-Start off all chapters with \verb|chapter|. \index{chapter!numbered} \verb|\extrachapter| will give you an unnumbered chapter that's added to the Table of Contents. \index{chapter!unnumbered}
 
-Here's an example of a citation \citep{GMP81}. Here's another \citep{PP98}. These will appear in the big bibliography at the end of the thesis.
-\index{bibliography}
 
-If you're new to \LaTeX{} and would like to begin by learning the basics, please see our free online course available at:\\ \url{https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-1} \index{LaTeX@\LaTeX}
-
-You can define nomenclatures \index{nomenclature} as you talk about key terms in your thesis. So what's a galaxy? %\nomenclature{Galaxy}{A system of stars independent from all other systems}
 
 
 \section{This is a Section}
-\lipsum[1-2]
+
 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=.3\textwidth]{caltech.png}
-\caption{This is a figure}\label{fig:logo}
-\index{Example Figure}
+\caption[Example Figure]{This is a figure}
+\label{fig:logo}
 \end{figure}
 
 \subsection{This is a subsection}
@@ -286,33 +338,22 @@ East & 80\\
 West & 140\\
 \hline
 \end{tabular}
-\caption{This is a table}\label{tab:sample}
-\index{tables}
+\caption[Table]{This is a table}
+\label{tab:sample}
 \end{table}
 
-\lipsum[3] \nomenclature{Asteroid}{A very small planet ranging from 1,000 km to less than one km in diameter. Asteroids are found commonly around other larger planets}
 
-\lipsum[4-5] 
 
-Here's an endnote.\endnote{Endnotes are notes that you can use to explain text in a document.}
 
-\section{This is Another Section}
-\lipsum[6-7] 
 
 \chapter{This is the Second Chapter}
-%\begin{refsection}
-%If you'd like to have separate bibliographies at the end of each chapter, %put a \verb|refsection| around the material of each chapter, then cite as usual -- e.g.~\citep{GMP81,Ful83}. Then do a \verb|\printbibliography| just before the \verb|refsection| ends. \index{bibliography!by chapter}
 
-%\printbibliography[heading=subbibliography]
-%\end{refsection}
 \btmtodo{This is the Dynamical Masses TTV paper}
 
 
 \chapter{This is the Third Chapter}
 
-%\publishedas{Cahn:etal:2015}
 
-[You can have chapters that were published as part of your thesis. The text style of the body should be single column, as it was submitted to the publisher, not formatted as the publisher did.]
 
 \btmtodo{This is TRENDS IV}
 
@@ -332,6 +373,7 @@ Here's an endnote.\endnote{Endnotes are notes that you can use to explain text i
 \btmtodo{This is the K2 planet catalog}
 
 \chapter{This is the Eighth Chapter}
+\label{chap:wfirst}
 
 \btmtodo{This is WFIRST}
 
