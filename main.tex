@@ -37,10 +37,14 @@
 \newcommand{\msun}{{M$_\odot$}}
 \newcommand{\rstar}{{R$_*$}}
 \newcommand{\mstar}{{M$_*$}}
+\newcommand{\kep}{{\textit Kepler}}
+\newcommand{\KT}{{\textit K2}}
 
 \newcommand{\aj}{AJ}
 \newcommand{\pasp}{PASP}
 \newcommand{\apj}{ApJ}
+\newcommand{\aap}{A\%A}
+\newcommand{\mnras}{MNRAS}
 \newcommand{\sci}{Science}
 \newcommand{\nat}{Nature}
 
@@ -240,8 +244,8 @@ what's the best place to search? Mike Bottom's paper.
 
 Planets in wide orbits: motivate TRENDS survey.
 
-\section{Transiting Planets}
-\subsection{Why bother? \btmtodo{Don't call it this}}
+\section{Transiting Planet Searches}
+\subsection{The Importance of Transiting Planets}
 If a planetary system is aligned in such a way that the planets pass between our
 viewing position in the solar system and the star itself, they will appear to pass
 across (or transit) the stellar disk during their orbit.
@@ -290,19 +294,116 @@ many planets via microlensing \btmtodo{Cite}.
 Microlensing surveys are also ideal for the discovery of transiting planets, as 
 I discuss in Chapter \ref{chap:wfirst}.
 
+Transit surveys discovered 45 more planets between these initial discoveries and 2009, largely through dedicated surveys such as WASP \btmtodo{CITE}, HAT \btmtodo{CITE}, and
+CoRoT \btmtodo{CITE}.
+These planets were largely giant planets in short periods, similar to the early hot Jupiters
+detected by RV surveys. 
 
+In 2009, the \kep\ mission \citep{Borucki10} was launched and began taking data.
+At this point, the exoplanet community had discovered 45 planets via the transit
+method.
+The precision of \kep\ was significantly better than any previous mission, allowing
+20 part per million (ppm) photometry over six hours of observation on 12th magnitude
+stars. 
+It also had a large field of view, staring at 100 square degrees of the northern sky.
+Every 30 minutes, the telescope recorded photometry of approximately 180,000 stars in a
+search for periodic transits caused by small planets.
+
+Any combination of words less strong than ``tremendous success'' would significantly undersell the data from \kep.
+The mission has discovered more than 4,700 planet candidates to date, with more than 
+2,300 of these being confirmed via other methods or statistically validated as planets
+to a high confidence \btmtodo{Cite Tim's recent paper, and the typical KOI papers}.
+Most of the stars targeted by the mission are Sunlike FGK dwarfs, so most of the discovered
+planets transit Sunlike FGK dwarfs.
+However, there were approximately 5,000 M dwarfs in the original \kep\ target list, around
+which more than 100 planets have been discovered.
+These include planets as small as Mars \citep{KOI961} and a planet as large as Jupiter
+\citep{Johnson11c}.
+These planets are located in different environments, with some located in single systems
+and others tightly packed in resonant chains with low eccentricities and mutual inclinations
+\citep{Swift13} \btmtodo{Also cite Ballard and Johnson}
+\citet{Morton14} show that these planets are predominantly small, rocky planets in short
+periods around their host stars.
+
+Many papers have focused on the planets detected around M dwarfs, but there are ``only'' 100
+of them from the \kep\ mission around 5000 stars. As \kep\ is largely a magnitude-limited
+survey, the majority of the M dwarfs surveyed are early M0 and M1 dwarfs. 
+Only 300 stars had an M2 or later spectral type in the original mission, and only 30 had
+an M4 or later spectral type.
+
+The \KT\ mission is providing an opportunity to rectify this oversight.
+With the failure of two reaction wheels on the \kep\ spacecraft in 2013, the telescope
+was left unable to point at the original \kep\ field, ending the primary mission.
+The scientific and technical staff behind \kep\ then designed, with community input,
+a mission called \KT. 
+In this mission, the telescope uses the remaining two reaction wheels to point the telescope
+along the ecliptic plane, while the third axis is approximately balanced by solar radiation
+pressure.
+The telescope then rolls about its axis at approximately 1 arcsec hour$^{-1}$, which 
+the telescope corrects by periodically firing its thrusters in the opposite direction
+of the roll.
+In the \KT\ mission, the telescope is able to point at fields in the ecliptic plane for
+approximately 75 days at a time.
+By the end of the \KT\ mission, the telescope will point at approximately 20 fields
+covering the ecliptic plane.
+
+\KT\ is extremely important for the study of M dwarfs.
+Different fields in the ecliptic point towards or well out of the galactic plane.
+The typical G dwarf observed in the \kep\ mission in 300 pc from the Earth, so changes
+in galactic latitude vastly affect the number of bright FGK dwarfs observable.
+The typical M dwarf, however, is 50 pc from the Earth, so even pointing directly out of the
+galactic plane does not affect the stellar density by more than a factor of two, making 
+tens of thousands of M dwarfs observable during the mission. 
+\KT\ provides an opportunity to revolutionize our understanding of planets around M dwarfs,
+if we can confirm planets and characterize their host stars with data from the telescope.
 
 \section{Understanding M Dwarfs}
 One of the other downsides of studying companions to M dwarfs is the difficulty 
 in inferring stellar parameters.
+For both RV-detected and transiting planets, the measured quantity of interest 
+(the Doppler amplitude and transit depth) are a function of both planetary and stellar
+parameters. 
+In both cases, we are only able to understand the planet if we understand its host star:
+precision planetary astronomy requires precision stellar astronomy.
 
-\btmtodo{Transit, RV planet params from stellar params}
+For solar-type stars, we are able to infer stellar parameters at the few percent level,
+even without a measurement of the star's luminosity through a parallax measurement
+\btmtodo{Cite this claim}.
+This is largely possible due to an excellent calibration source located 1 AU away from the 
+Earth.
+For M dwarfs, 
+\btmtodo{No calibrator, Physics is more complicated, photons are more scarce.}
+
+Attempts to understand M dwarf atmospheres and interiors typically depend on empirical 
+relations between photometric or spectroscopic parameters, calibrated to a few stars
+with known properties.
+These calibrators tend to be eclipsing binaries with directly measured masses and radii \btmtodo{Cite 
+examples} or single, nearby stars with interferometrically measured radii \btmtodo{Cite Tabby}.
+For example, \btmtodo{Delfosse}
+
 \btmtodo{Where are we as a field in M dwarf params? Much closer than 5 years ago
 but still not great}
 
-\btmtodo{Talk about M+M binaries here}
+The problem is even worse when we consider young M dwarfs.
+\btmtodo{Grab words from proposals here.}
+
+For very young stars, we can measure their masses by observing the kinematics of
+the disk of gas and dust surrounding the star \btmtodo{Cite Czekala}.
+These disks dissipate within the first ten million years of the star's life, decreasing the opportunity to measure directly the masses of stars with ages larger than 10 million years but not yet onto the main sequence. 
+This is especially true for M dwarfs, which are faint, so harder to observe, and also 
+form in binaries less often than their higher mass counterparts \btmtodo{Marcy, Shan}.
+Fewer than 20 pre-main sequence (PMS) M dwarfs in binary systems have had dynamical masses measured to a
+precision of 25\% or better through astrometric monitoring.
+The vast majority of these systems are younger than 10 Myr.
+In the range 10-100 Myr, for a given luminosity and age, different stellar models predict different stellar masses, some with discrepancies as large as 50\%.
+Measuring stellar masses of astrometric M+M binaries in young moving groups with known 
+ages provides a first, needed test of these models in order to constrain evolutionary models.
 
 \section{Brown Dwarfs}
+Many of the problems for M dwarfs outlined in this introduction are even worse for
+brown dwarfs.
+Brown dwarfs are \btmtodo{Explain}
+
 \btmtodo{Say something about irradiation here---M dwarfs are nice!}
 
 \section{Goals of this Thesis} 
@@ -314,7 +415,8 @@ but still not great}
 
 
 
-\section{This is a Section}
+
+\chapter{This is the Second Chapter}
 
 
 \begin{figure}[hbt!]
@@ -343,10 +445,6 @@ West & 140\\
 \end{table}
 
 
-
-
-
-\chapter{This is the Second Chapter}
 
 \btmtodo{This is the Dynamical Masses TTV paper}
 
