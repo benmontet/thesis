@@ -1,10 +1,30 @@
 % identification
 \ProvidesFile{apj.bbx}[2015/08/01 Biblatex bibliography style for ApJ]
 
+\DeclareLabelalphaTemplate{
+\labelelement{
+\field[varwidthlist,names=1]{labelname}
+}
+}
+
+% sort the bibliography
+\DeclareSortingScheme{apjsort}{
+  %\sort{\field{presort}}
+  %\sort[final]{\field{sortkey}}
+  \sort{\field{labelalpha}\field{year}}
+  %\sort{\field{sortyear}\field{year}}
+  %\sort{\citeorder}
+}
+
+
 % base bibliography style
 \RequireBibliographyStyle{authoryear-comp}
-\ExecuteBibliographyOptions{useprefix=true, firstinits=true, maxbibnames=5,
-  minbibnames=3, sorting=nyc, isbn=false, doi=false, eprint=false}
+\ExecuteBibliographyOptions{maxalphanames=1,
+  labelalpha=true, sorting=anyt,
+  useprefix=true, firstinits=true, maxbibnames=5,
+  minbibnames=3, isbn=false, doi=false,
+  eprint=false, maxcitenames=2,
+  uniquelist=false, uniquename=init, sorting=apjsort}
 
 % options
 \newtoggle{bbx:embedlinks}
@@ -13,6 +33,9 @@
 \DeclareBibliographyOption{adslinkcolor}{\def\bbx@adslinkcolor{#1}}
 \DeclareBibliographyOption{arxivlinkcolor}{\def\bbx@arxivlinkcolor{#1}}
 \ExecuteBibliographyOptions{doilinkcolor=, adslinkcolor=, arxivlinkcolor=}
+
+
+
 
 % new [bibcode] field
 \DeclareSourcemap{
@@ -246,14 +269,6 @@
 % remove the final period
 \renewcommand*\finentrypunct{}
 
-% sort the bibliography
-\DeclareSortingScheme{nyc}{
-  \sort{\field{presort}}
-  \sort[final]{\field{sortkey}}
-  \sort{\field{sortname}\field{author}\field{editor}\field{translator}}
-  \sort{\field{sortyear}\field{year}}
-  \sort{\citeorder}
-}
 
 % end
 \endinput

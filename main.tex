@@ -17,14 +17,19 @@
 \usepackage[T1]{fontenc}
 \usepackage{newtxtext,newtxmath}
 
+
 % Must use biblatex to produce the Published Contents and Contributions, per-chapter bibliography (if desired), etc.
 \usepackage[
     backend=biber,natbib,
     %backend=natbib,
     % IMPORTANT: load a style suitable for your discipline
     style=authoryear-comp,
+    uniquelist=false,
     doi=False,
-    bibstyle=apj
+    %maxalphanames=1,
+    %labelalpha,
+    %sorting=ynt,
+    bibstyle=apj, 
 ]{biblatex}
 \renewcommand*{\nameyeardelim}{\addspace}
 %\usepackage{natbib}
@@ -55,7 +60,9 @@
 \newcommand{\aj}{AJ}
 \newcommand{\pasp}{PASP}
 \newcommand{\apj}{ApJ}
-\newcommand{\aap}{A\%A}
+\newcommand{\apjl}{ApJL}
+\newcommand{\apjs}{ApJS}
+\newcommand{\aap}{A\&A}
 \newcommand{\mnras}{MNRAS}
 \newcommand{\sci}{Science}
 \newcommand{\nat}{Nature}
@@ -135,12 +142,15 @@ spectral type M.
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=.5\textwidth]{hr.png}
-\caption[Russell's original H-R Diagram]{\btmtodo{This is a figure}}
+\caption[Russell's original H-R Diagram]{The original H-R diagram, as published by
+\citet{Russell14}. On the $y$-axis is absolute magnitude, equivalent to the logarithm
+of the star's luminosity. On the $x$-axis is stellar spectral type, which we now know
+maps approximately to stellar effective temperature.}
 \label{fig:HR}
 \end{figure}
 
-Russell and others hold no personal grudge against M dwarfs, the prolem is the physics
-of M dwarfs themselves.
+Russell and others hold no personal grudge against M dwarfs. The problem stems from the physics
+of M dwarfs themselves, specifically the stellar mass-luminosity relation.
 To show this, let us begin with the equations of stellar structure.
 The first of these declares a star is in hydrostatic equilibrium:
 \begin{equation}
@@ -278,17 +288,89 @@ Any planets not in nearly edge-on orbits will be missed in a transit search.
 In addition, transit photometry provides precise information about the location 
 of a planet, but only at one point of its orbit.
 Even in cases where information about the eccentricity can be inferred from the
-transit itself \btmtodo{Cite: Dawson and Johnson}, there is still a degeneracy
+transit itself \citep{Dawson12a}, there is still a degeneracy
 between the eccentricity and argument of periastron which can not be broken without
 additional information.
 
 On the other hand, there are a few key advantages in transit searches relative to 
 RV surveys. 
-\btmtodo{1, search more types of stars---higher masses. 2, measure radii directly,
-not m sin i. 3, can understand atmospheres---and cite Heather's papers!!!}
+Transit searches can target many more stars than RV surveys. 
+To a first order approximation, transits are achromatic, with the depth of the transit
+approximately equal at all wavelengths, so transits can be detected through broadband
+photometry.
+As RV surveys require high-resolution spectroscopy, they require comparatively brighter
+stars; transit searches can target significantly fainter stars, opening up the search
+for planets to many more M dwarfs.
+Similarly, as spectral features are no longer required, transit surveys can target 
+rapidly rotating massive stars without convective outer layers and narrow spectral lines.
 
+Transit surveys also allow for a more direct determination of the planetary physical 
+properties. 
+In RV searches, only a minimum mass
+for the detected planet, $m \sin i$, can be determined. 
+Although the planet mass distribution and geometrical bias both favor large
+(close to edge-on) inclinations \citep{Ho11}, individual objects have unknown inclinations
+so the absolute masses of the RV planets cannot be determined.
+In transit searches, however, the direct observable is the transit depth, which depends
+directly on the size of the planet: for a sufficiently precise measurement of the stellar
+radius and transit parameters, any precision on the planet radius can be achieved without
+a geometric bias.
 
-\btmtodo{Motivate TTV systems here as well}
+Perhaps most significantly, transit searches allow us to probe atmospheres of
+other planets.
+Planetary atmospheres, Earth's included, are optically thick at some wavelengths and
+optically thin at others. 
+In the context of the Earth, this makes some wavelengths more amenable for astronomical
+observations than others, as the atmosphere only interacts with photons of certain
+wavelengths.
+The same is true for planets around other stars: at same wavelengths their atmospheres
+are transparent to radiation from their host stars, while at other wavelengths
+the atmospheres absorb light.
+By observing a transit at a wavelength at which the atmosphere is optically thick, the
+size of the planet inferred is the size of the planet, including its atmosphere.
+Alternatively, by observing at a wavelength at which the wavelength is optically thin,
+we measure only the size of the planet itself, not its atmosphere \citep[e.g.][]{Knutson11, Knutson14}. 
+Such an analysis, termed \textit{transmission spectroscopy}, is impossible in traditional RV searches for planets.
+
+To fully understand the atmosphere measured during transmission spectroscopy observations,
+we want to understand the mass (and therefore the density) of the transiting planet as
+well.
+If the transiting planet is massive and the star a good RV target (bright and not 
+rapidly-rotating), RVs can be used to meaure a mass. 
+Since the planet is known to be transiting, it must have $i \approx \pi/2$, so that
+$\sin i \approx 1$. 
+Unfortunately, the vast majority of transiting planets are too faint to make ideal
+RV targets.
+In these cases, we would like to have an alternative method to measure masses.
+
+When multiple planets orbit the same star, they gravitationally perturb each other
+during close encounters along their orbit.
+Transit photometry provides precise information about the location of a planet on its 
+orbit at the moment of transit, especially the times at which the transits
+begin and end.
+In \kep\ data, it is not uncommon to be able to measure individual times of transit to a
+precision of five minutes or better, with the exact precision a function of the 
+planet size (which affects the size of each individual transit) and orbital period
+(which affects the speed at which a planet orbits its host star, assuming a 
+circular orbit).
+Perturbations from other planets can be significantly larger than the transit timing
+precision, leading to transit timing variations (TTVs). 
+For a hypothetical distant observer detecting transits in our solar system, the
+presence of Jupiter could be inferred from TTVs on the inner planets: 
+Jupiter induces TTVs of 10 minutes on Venus and Earth and 100 minutes on Mars
+\citep{Agol05, Holman05}.
+
+\kep\ enabled the first detections of TTVs. 
+Timing variations have been used to confirm the planetary nature of apparent transiting
+planet signals in \kep\ \citep{Holman10, Rowe14}.
+They have also enabled the detection of non-transiting planets perturbing transiting
+planets \citep[e.g.][]{Ballard11, Nesvorny13}, as well as measurements of the eccentricity 
+distribution of transiting planets \citep{Hadden14}.
+Observations of TTVs enable a direct measurement of the mass ratio between the
+perturbing planet and the host star \citep{Agol05, LithwickWu12},
+again enabling us to understand the mass of the transiting planet at the level 
+at which we understand the mass of the host star.
+ 
 
 
 \subsection{History of Transit Searches}
@@ -333,7 +415,7 @@ These include planets as small as Mars \citep{KOI961} and a planet as large as J
 \citep{Johnson11c}.
 These planets are located in different environments, with some located in single systems
 and others tightly packed in resonant chains with low eccentricities and mutual inclinations
-\citep{Swift13} \btmtodo{Also cite Ballard and Johnson}
+\citep{Swift13, Ballard16}.
 \citet{Morton14} show that these planets are predominantly small, rocky planets in short
 periods around their host stars.
 
@@ -400,14 +482,14 @@ The problem is even worse when we consider young M dwarfs.
 \btmtodo{Grab words from proposals here.}
 
 For very young stars, we can measure their masses by observing the kinematics of
-the disk of gas and dust surrounding the star \btmtodo{Cite Czekala}.
+the disk of gas and dust surrounding the star \citep{Czekala15, Czekala16}.
 These disks dissipate within the first ten million years of the star's life, decreasing the opportunity to measure directly the masses of stars with ages larger than 10 million years but not yet onto the main sequence. 
 This is especially true for M dwarfs, which are faint, so harder to observe, and also 
-form in binaries less often than their higher mass counterparts \btmtodo{Marcy, Shan}.
+form in binaries less often than their higher mass counterparts \citep{Fischer92, Shan15}.
 Fewer than 20 pre-main sequence (PMS) M dwarfs in binary systems have had dynamical masses measured to a
-precision of 25\% or better through astrometric monitoring.
+precision of 25\% or better through astrometric monitoring \citep{Dupuy14}.
 The vast majority of these systems are younger than 10 Myr.
-In the range 10-100 Myr, for a given luminosity and age, different stellar models predict different stellar masses, some with discrepancies as large as 50\%.
+In the range 10-100 Myr, for a given luminosity and age, different stellar models predict different stellar masses, some with discrepancies as large as 50\% \citep{Hillenbrand04,Schlieder14}.
 Measuring stellar masses of astrometric M+M binaries in young moving groups with known 
 ages provides a first, needed test of these models in order to constrain evolutionary models.
 
@@ -429,7 +511,7 @@ periods which may have formed via core accretion, like planets.
 On the high-mass end, there is a population of transiting brown dwarfs in wider orbital
 periods which may have formed via gravitational collapse, like other high mass-ratio
 eclipsing binaries.
-In the middle, there is a ``brown dwarf desert,'' with a paucity of 30-50 \mjup objects in
+In the middle, there is a ``brown dwarf desert,'' with a paucity of 30-50 \mjup\ objects in
 binary systems.
 Some, especially theorists, have suggested a definition of brown dwarfs based on their
 formation, with all objects formed via core accretion called planets and all objects
@@ -448,13 +530,66 @@ universe \citep{Burrows01}.
 Understanding the physical parameters of an individual brown dwarf requires an assessment of its age as well.
 
 Broadly speaking, there are two classes of brown dwarfs.
+Approximately two thousand brown dwarfs have been detected as single objects in the sky,
+largely through IR surveys like 2MASS and WISE \citep[e.g.][]{Kirkpatrick99, Kirkpatrick11}.
+For these objects, we are able to study their atmospheric properties in detail: we can 
+infer the presence of clouds, measure a rotation period, or obtain a spectrum and measure
+spectroscopic properties like the surface gravity or effective temperature \citep[e.g.][]{Faherty14, Filippazzo15}. 
+
+What we are not able to do is measure masses and radii for these single objects.
+There are only two eclipsing brown dwarf systems known, one in the $\sim 1$ Myr old Orion
+Nebula cluster and one in the $\sim 10$ Myr old Upper Scorpius young moving group
+\citep{Stassun06, David16}.
+As both of these are extremely young, they are not representative of the field brown dwarf
+population so do not provide useful benchmark comparisons.
+Among older systems, we know of approximately ten systems with a brown dwarf transiting a main-sequence star, as I will describe in Chapter \ref{chap:lhsspitz}.
+The vast majority of these systems include a brown dwarf in a short period orbiting
+close enough so that the energy from stellar irradiation is significantly larger than
+the emitted heat from the cooling of the brown dwarf, irradiating and possibly inflating
+the atmosphere of the brown dwarf.
+In these cases, the brown dwarfs will again appear significantly different from the field
+brown dwarf population, eliminating the possibility that these could be used as benchmark
+objects to calibrate brown dwarf masses and radii.
+
+
+We would ideally want a transiting brown dwarf receiving a low level of irradiation,
+so we can measure its mass and radius.
+We would also want this brown dwarf to be nearby so we can measure its atmosphere to
+compare to the field brown dwarf population, providing a key test of brown dwarf
+evolutionary models.
+
+If we want a transiting object that is nearby and not highly irradiated by its companion,
+an ideal place to search is around M dwarfs. 
+As stated previously, M dwarfs in transit searches are typically much closer than 
+higher mass stars, as transit surveys tend to select magnitude-limited samples and
+M dwarfs are intrinsically faint. 
+Moreover, their low luminosities mean a companion at a given separation will receive
+significantly less irradiation than the same companion around a higher mass star,
+so that relatively short periods can allow for non-irradiated companions.
+
+The equilibrium temperature for an object with albedo $a$ at a given separation, $r$, from a 
+stellar companion with radius \rstar, is
+\begin{equation}
+T_{\textrm{eq}} = T_\star (1-a)^{1/4} \sqrt{\frac{R_\star}{2r}}.
+\end{equation}
+A 65 \mjup\ brown dwarf has a temperature of 1100 Kelvin even at the age of 
+the universe \citep{Saumon08}. 
+Such a brown dwarf around an M dwarf would be expected to have an albedo of
+0.07 \citep{Marley99}.
+For this brown dwarf to have an equilibrium temperature of 1100 Kelvin orbiting a
+3000 Kelvin M dwarf, it would need to orbit at only 3.7 stellar radii, or approximately
+0.01 Astronomical Units (AU), corresponding to an orbital period of approximately one day.
+Therefore, even M dwarf-brown dwarf binaries with few day periods can provide useful 
+comparisons to the field brown dwarf population.
+Of course, this brief calculation ignores the possible effects of interactions between
+the magnetic fields of the two objects. These could play a significant role, as 
+observations of aurorae on brown dwarfs suggest they can have magnetic fields exceeding
+2000 Gauss \citep{Hallinan15}
 
 
 
-\btmtodo{Cite Gregg somewhere in here!}
 
 
-\btmtodo{Say something about irradiation here---M dwarfs are nice!}
 
 \section{Goals of this Thesis} 
 
@@ -511,6 +646,7 @@ West & 140\\
 \chapter{This is the Fifth Chapter}
 
 \btmtodo{This is LHS Part II}
+\label{chap:lhsspitz}
 
 \chapter{This is the Sixth Chapter}
 
