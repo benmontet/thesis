@@ -66,7 +66,8 @@
 \newcommand{\mnras}{MNRAS}
 \newcommand{\sci}{Science}
 \newcommand{\nat}{Nature}
-
+\newcommand{\aapr}{Astronomy and Astrophysics Review}
+\newcommand{\actaa}{Acta Astronomica}
 
 % Name of your .bib file(s)
 \addbibresource{exopapers.bib}
@@ -246,10 +247,33 @@ With so many bright solar-type stars in the solar neighborhood, it is easy to un
 surveys. 
 
 \section{Radial Velocity Planet Searches}
+\subsection{Stellar Radial Velocities}
+Planets do not orbit their host stars.
+Planets and stars, like any pair of bodies orbiting each other, orbit their common
+center of mass, or barycenter.
+For circular orbits, the planet and star velocities are constant, and the observed
+radial component of the velocity is modulated sinusoidally with the period of the planet.
+The magnitude of the RV signal in this case depends only the mass of the planet, $m$, 
+the mass of the star, $M$, the orbital period, $P$, and the unknown inclination $i$.
+Specifically, by taking the time derivative of the position of the star in time,
+the RV can be shown to be
+\begin{equation}
+v_r = \bigg(\frac{2\pi G}{P}\bigg)^{1/3} \frac{m \sin i}{(M+m)^{2/3}} \cos{\nu}.
+\end{equation}
+Here, $G$ is Newton's constant and $\nu$ the mean anomaly of the planet, which in the circular case increases
+linearly from $0$ to $2\pi$ in time over the course of one orbit.
+For Jupiter, the Sun's reflex RV motion is 13 m s${-1}$; for Earth, 9 cm s$^{-1}$.
+
+For planets on eccentric orbits, the math is more complicated.
+Again, the derivation begins with the time derivative of the position of the star, but
+in the eccentric case neither the linear or angular velocity is constant \citep{Kepler09}.
+
+
 The first radial velocity (RV) planet searches focused almost exclusively on Sunlike
 (FGK) stars. 
-There are two biases that make this a reasonable choice of star. 
-First, 
+Such stars are ideal targets for an RV search for two reasons.
+
+
 
 FGK are good
 found a bunch of new planets
@@ -375,21 +399,22 @@ at which we understand the mass of the host star.
 
 \subsection{History of Transit Searches}
 The first transiting planet detected was a giant planet orbiting HD\,209458 
-\btmtodo{Cite: Charbonneau, Henry}. 
+\citep{Charbonneau00, Henry00}
 This planet, a hot Jupiter, has a radius of $1.14 \pm 0.06$ \rsun\ and an orbital 
 period of 3.52 days.
 The planet was already known to exist from RV surveys, and had a measured $m \sin i$.
 Detection of the transit provided a measurement of the inclination, enabling a 
 direct measurement of the mass; the transit detection made it the first planet outside our solar system with a directly measured mass and radius.
 
-Shortly after came the first discovery of a planet via transit, OGLE-TR-56b \btmtodo{Cite} from the Optical Gravitational Lensing Experiment (OGLE) mission.
+Shortly after came the first discovery of a planet via transit, OGLE-TR-56b \citep{Udalski02} from the Optical Gravitational Lensing Experiment (OGLE) mission.
 The primary goal of OGLE is to detect dark matter through microlensing, but it has also discovered 
-many planets via microlensing \btmtodo{Cite}.
+many planets via microlensing \citep{Sumi11, Cassan12}.
 Microlensing surveys are also ideal for the discovery of transiting planets, as 
 I discuss in Chapter~\ref{chap:wfirst}.
 
-Transit surveys discovered 45 more planets between these initial discoveries and 2009, largely through dedicated surveys such as WASP \btmtodo{CITE}, HAT \btmtodo{CITE}, and
-CoRoT \btmtodo{CITE}.
+Transit surveys discovered 45 more planets between these initial discoveries and 2009, largely through dedicated surveys such as the Super-Wide Angle Search for Planets \citep[SuperWASP,][]{Street03}, the Hungarian Automated Telescope Network 
+\citep[HATNet,][]{Bakos02}, and
+Convection Rotation et Transits plan\'{e}taires \citep[CoRoT,][]{Auvergne09}.
 These planets were largely giant planets in short periods, similar to the early hot Jupiters
 detected by RV surveys. 
 
@@ -406,7 +431,7 @@ search for periodic transits caused by small planets.
 Any combination of words less strong than ``tremendous success'' would significantly undersell the data from \kep.
 The mission has discovered more than 4,700 planet candidates to date, with more than 
 2,300 of these being confirmed via other methods or statistically validated as planets
-to a high confidence \btmtodo{Cite Tim's recent paper, and the typical KOI papers}.
+to a high confidence \citep{Batalha13, Burke14, Mullally15, Rowe15, Morton16}.
 Most of the stars targeted by the mission are Sunlike FGK dwarfs, so most of the discovered
 planets transit Sunlike FGK dwarfs.
 However, there were approximately 5,000 M dwarfs in the original \kep\ target list, around
@@ -460,27 +485,45 @@ parameters.
 In both cases, we are only able to understand the planet if we understand its host star:
 precision planetary astronomy requires precision stellar astronomy.
 
-For solar-type stars, we are able to infer stellar parameters at the few percent level,
-even without a measurement of the star's luminosity through a parallax measurement
-\btmtodo{Cite this claim}.
+For solar-type stars, we are able to infer stellar parameters at the few percent level
+through well-tested relationships between absolute magnitude and stellar parameters
+\citep{Andersen91, Casagrande10}.
 This is largely possible due to an excellent calibration source located 1 AU away from the 
 Earth.
-For M dwarfs, 
-\btmtodo{No calibrator, Physics is more complicated, photons are more scarce.}
+For M dwarfs, we do not have a calibration source.
+The physics of M dwarf atmospheres is more complicated as well.
+M dwarfs are defined by the presence of titanium oxide (TiO) bands in their
+atmospheres \citep{Kuiper38, Morgan38}, but also have molecular bands due to
+vanadium oxide (VO), carbon monoxide (CO), and water (H$_2$O) \citep[e.g.][]{Mould75, Muirhead12b}.
+As photos are more scarce, especially in the optical, longer integration times are 
+required to study these stars just to detect the molecular features, much less
+understand them.
+
 
 Attempts to understand M dwarf atmospheres and interiors typically depend on empirical 
 relations between photometric or spectroscopic parameters, calibrated to a few stars
 with known properties.
-These calibrators tend to be eclipsing binaries with directly measured masses and radii \btmtodo{Cite 
-examples} or single, nearby stars with interferometrically measured radii \btmtodo{Cite Tabby}.
-For example, \btmtodo{Delfosse}
+These calibrators tend to be eclipsing binaries with directly measured masses and radii 
+\citet{Birkby12} or single, nearby stars with interferometrically measured radii \citep{Boyajian12}.
+For example, \citet{Delfosse00} use observations of 16 M dwarfs with known masses and
+luminosities to build a relationship between absolute $K$-band magnitude and stellar mass
+that enables mass measurements to approximately 10\% precision.
+However, this observation requires a parallax or other distance measurement, as the
+required observable is an absolute magnitude.
 
-\btmtodo{Where are we as a field in M dwarf params? Much closer than 5 years ago
-but still not great}
+More recently, \citet{RojasAyala12} developed a relation between the relative flux
+of an M dwarf at different wavelengths in the $K$-band and the star's temperature
+and metallicity.
+This method produces uncertainties on stellar parameters of approximately 10\%, without
+a direct parallax measurement, a method that has been applied to many of the M dwarfs
+in \kep\ to infer stellar parameters \citep{Muirhead12b, Muirhead14}.
+\citet{Newton15} developed a relation between features in the $H$-band spectra of M dwarfs,
+finding they can be used to determine a stellar effective temperature with a residual
+scatter of 73 K and a stellar radius with a residual scatter of 0.027 \rsun.
+
+
 
 The problem is even worse when we consider young M dwarfs.
-\btmtodo{Grab words from proposals here.}
-
 For very young stars, we can measure their masses by observing the kinematics of
 the disk of gas and dust surrounding the star \citep{Czekala15, Czekala16}.
 These disks dissipate within the first ten million years of the star's life, decreasing the opportunity to measure directly the masses of stars with ages larger than 10 million years but not yet onto the main sequence. 
