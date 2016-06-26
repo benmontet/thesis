@@ -1,8 +1,8 @@
 \section{Introduction}
 \label{S:Intro}
-With modern radial velocity techniques and the phenomenal success of space-based transit surveys, exoplanetary science has moved from a ``stamp-collecting'' era of finding individual systems to an era where hundreds of planetary systems are discovered simultaneously \citep{Borucki11}. Despite these successes, accurate characterization of planets is still challenging. In general, uncertainties in the radii and masses of planets are dominated by uncertainties in the radii and masses of their host stars \citep[e.g.][]{KOI961}. Difficulties in characterizing the physical properties of planets are particularly acute for systems discovered by the \kep\ space telescope. For many systems, the ratio between the radius of the planet and the radius of its host star is known to within 1 part in 1000 \citep{Batalha13}. Yet the stellar radii are often not known even to within ten percent, meaning much of the precision of \kep\ is lost when estimating planetary properties \citep{Lissauer12, KOI254}.
+With modern radial velocity techniques and the phenomenal success of space-based transit surveys, exoplanetary science has moved from a ``stamp-collecting'' era of finding individual systems to an era where hundreds of planetary systems are discovered simultaneously \citep{Borucki11b}. Despite these successes, accurate characterization of planets is still challenging. In general, uncertainties in the radii and masses of planets are dominated by uncertainties in the radii and masses of their host stars \citep[e.g.][]{KOI961}. Difficulties in characterizing the physical properties of planets are particularly acute for systems discovered by the \kep\ space telescope. For many systems, the ratio between the radius of the planet and the radius of its host star is known to within 1 part in 1000 \citep{Batalha13}. Yet the stellar radii are often not known even to within ten percent, meaning much of the precision of \kep\ is lost when estimating planetary properties \citep{Lissauer12, KOI254}.
 
-In general, measuring the masses of exoplanet host stars is a model-dependent procedure. For nearby stars with trigonometric parallaxes, one compares the luminosity, effective temperature, and metallicity of a star to stellar evolution model grids \citep{ValFis05, JohnsonMW12}. For stars without measured parallaxes, the stellar density can be measured from the transit light curve and used in place of the luminosity. However, this relies on either the assumption that the planet's orbit is circular---a poor assumption for periods larger than 10 days---or an RV orbital solution \citep{Sozzetti07, DawsonJJ12}. The atmospheres and interior structures of stars are also poorly understood for stars that differ substantially from the Sun, complicating their analyses further. Thus, model-independent methods of measuring stellar masses are extremely valuable. 
+In general, measuring the masses of exoplanet host stars is a model-dependent procedure. For nearby stars with trigonometric parallaxes, one compares the luminosity, effective temperature, and metallicity of a star to stellar evolution model grids \citep{Valenti05, JohnsonMW12}. For stars without measured parallaxes, the stellar density can be measured from the transit light curve and used in place of the luminosity. However, this relies on either the assumption that the planet's orbit is circular---a poor assumption for periods larger than 10 days---or an RV orbital solution \citep{Sozzetti07, Dawson12a}. The atmospheres and interior structures of stars are also poorly understood for stars that differ substantially from the Sun, complicating their analyses further. Thus, model-independent methods of measuring stellar masses are extremely valuable. 
 
 \citet{Agol05} suggest that in a system with transiting planets, a precise measurement of the transit duration, which depends on stellar density, coupled with radial velocity information and precise measurements of the scatter in transit times can provide a unique measurement of the stellar mass. Unfortunately, this strategy requires precise knowledge of the inclination of the system, which from a transit light curve is degenerate with limb-darkening coefficients \citep{Jha00}, especially for low signal-to-noise transit detections.
 
@@ -17,7 +17,7 @@ In this paper, we propose a method to directly measure stellar and planetary mas
 
 \subsection{Mass Determination from TTVs}
 
-Consider a system of two coplanar planets orbiting near (but not exactly at) a first-order mean motion resonance. The planets have periods $P$ and $P^\prime$ (here and throughout, the unprimed quantity refers to the inner planet and the primed quantity to the outer planet) and orbit their star such that the inner planet completes approximately $j$ orbits in the time the outer planet completes $j-1$. A nearly edge-on observer will detect both planets transiting their host star. Because of the near-commensurability of their periods, the inner planet will pass its companion at nearly the same location each orbit, driving small gravitational interactions which add coherently, inducing a small “forced eccentricity” on each object. The two planets will therefore not transit their star in an exactly periodic fashion. Instead, a small, sinusoidal departure from periodicity, termed a transit timing variation (TTV), will be observed \citep[e.g.][]{Nesvorny12}. TTVs have been used to detect the presence of nontransiting planets \citep{Ballard11, Dawson12} and to fully characterize systems when multiple planets transit \citep{Holman10, Lissauer11}. The period of the TTV signal is related to the periods of the planets such that
+Consider a system of two coplanar planets orbiting near (but not exactly at) a first-order mean motion resonance. The planets have periods $P$ and $P^\prime$ (here and throughout, the unprimed quantity refers to the inner planet and the primed quantity to the outer planet) and orbit their star such that the inner planet completes approximately $j$ orbits in the time the outer planet completes $j-1$. A nearly edge-on observer will detect both planets transiting their host star. Because of the near-commensurability of their periods, the inner planet will pass its companion at nearly the same location each orbit, driving small gravitational interactions which add coherently, inducing a small “forced eccentricity” on each object. The two planets will therefore not transit their star in an exactly periodic fashion. Instead, a small, sinusoidal departure from periodicity, termed a transit timing variation (TTV), will be observed \citep[e.g.][]{Nesvorny12}. TTVs have been used to detect the presence of nontransiting planets \citep{Ballard11, Dawson12b} and to fully characterize systems when multiple planets transit \citep{Holman10, Lissauer11a}. The period of the TTV signal is related to the periods of the planets such that
 \begin{equation}
 P_{TTV} = \frac{1}{|j / P^\prime - (j-1) / P|}.
 \end{equation}
@@ -85,27 +85,31 @@ Once the shape of the light curve is modeled, we fit a curve of this shape to ea
 
 For our method to provide meaningful mass estimates, the primordial (free) eccentricity of the system must be damped on a timescale shorter than the age of the system. As explained in L12, if the zeropoints of the transit timing variations occur at the times at which the longitude of conjunction of the planets is equal to 0 or 180 degrees, then the system is likely to have negligible free eccentricity. We check the phase of these transit timing variations by fitting each TTV curve independently to a sinusoid. We determine parameters of this sinusoid and their uncertainties by minimizing the $\chi^2$ statistic through a Levenberg-Marquardt algorithm. Additionally, we allow for a vertical offset to the sine function in the fit (indicative of a miscalculated time of transit center $t_c$), and also a linear trend (indicative of a miscalculated orbital period). The results of this minimization can be found in Table \ref{TTVdata}. Both planets are consistent with having zero free eccentricity and anticorrelated TTV signals. From these parameters, we measure a fractional distance from commensurability $\Delta = -2.776 \times 10^{-2}$ and find the coefficients of the disturbing function to be $f = -1.251$ and $g = 0.5308$. The amplitude of the TTV signals for Kepler-18 c and d can be measured to within 3.3 and 6.8 percent, respectively. 
 
-\begin{deluxetable*}{cccccc}
-	\tabletypesize{\footnotesize}
-	\tablecolumns{6}
-        \tablecaption{TTV Fitting Results for Kepler-18}
-        \tablehead{ \colhead{Planet} & \colhead{Phase (deg)} & \colhead{Amplitude (min)} & \colhead{Period (day)} & \colhead{$T_c$ (BJD - 2454900.0)} & \colhead{TTV Period (day)}}
-        \startdata
+\begin{table}[hbt!]
+\scriptsize
+\centering
+\begin{tabular}{cccccc}
+\hline
+Planet & Phase (deg) & Amplitude (min) & Period (day) & $T_c$ (BJD - 2454900.0) &  TTV Period (day)\\
+\hline
         18-c & $184.5 \pm 4.1$ & $5.54 \pm 0.18$ & 7.6415716(5) & 68.4071(2) & $265.1 \pm 2.5$ \\
-        18-d & $3.2 \pm 8.8$ & $4.46 \pm 0.30$ & 14.858941(1) & 61.1531(1) & $265.9 \pm 5.3$
-        \enddata
-        \label{TTVdata}
-\end{deluxetable*}
+        18-d & $3.2 \pm 8.8$ & $4.46 \pm 0.30$ & 14.858941(1) & 61.1531(1) & $265.9 \pm 5.3$\\
+\hline
+\end{tabular}
+\caption{TTV fitting results for Kepler-18}
+\label{TTVdata}
+\end{table}
+
+
 These results can then be combined with radial velocity measurements in order to uniquely constrain the stellar and planetary masses. C11 used 14 radial velocity measurements to confirm this system; we used these data plus four additional observations collected between 1 July 2012 and 1 August 2012, all of which are provided in Table \ref{RVels}.
 
 
-\begin{deluxetable}{ccc}
-\tablewidth{0pt}
-\tablecaption{Keck HIRES Relative Radial Velocity Measurements of Kepler-18.}
-
-\tablehead{\colhead{BJD-2440000} & \colhead{RV}           & \colhead{$\sigma$} \\
-                        & \colhead {m\,s$^{-1}$} & \colhead {m\,s$^{-1}$} }
-\startdata
+\begin{table}[hbt!]
+\centering
+\begin{tabular}{ccc}
+\hline
+BJD-2440000 & RV (m\,s$^{-1}$)   & $\sigma$ m\,s$^{-1}$ \\
+\hline
  15076.009  & 7.750   & 2.539\\
  15076.927  &  6.950  & 2.487\\
  15081.024  &  8.617  & 4.214\\
@@ -123,11 +127,12 @@ These results can then be combined with radial velocity measurements in order to
  16109.905  & -14.919 & 2.261\\
  16111.845  &  4.123  & 2.642\\
  16115.973  & -0.326  & 2.434\\
- 16140.839  & -8.153  & 2.730
-
-\enddata
+ 16140.839  & -8.153  & 2.730\\
+\hline
+\end{tabular}
+\caption{Keck/HIRES relative RV measurements of Kepler-18.}
 \label{RVels}
-\end{deluxetable}
+\end{table}
 
 The large uncertainties in each individual observation, coupled with the small number of observations relative to the number of observed transits, suggest our mass uncertainties will be dominated by uncertainties in the radial velocity semiamplitude. In fact, many different solutions fit the RV data equally well. As an example, C11 fit a larger RV semiamplitude for planet d than c, despite the fact that they find planet c to be both more massive and nearer the star than planet d. The analysis is complicated by the existence of the much smaller planet b, orbiting inside the other two. In this case, we invoke one additional piece of information. Equations \ref{Veqn2} and \ref{Veqn} can be combined to solve for the mass ratio of the resonant planets, 
 \begin{equation}
@@ -138,22 +143,25 @@ which in this case implies $m^\prime/m = 1.22 \pm 0.09$, where $m^\prime$ refers
 
 With this additional constraint, we model the RVs as the sum of three sinusoids of the form of Equation \ref{RVeqn}, with three free parameters: the semiamplitude of one of the resonant planets (c or d; here, we fit c), the semiamplitude of the innermost planet b, and an offset term, $\gamma$. We find the best fitting parameters to be $K_c = 6.89 \pm 1.40$ m/s, $K_b = 4.18 \pm 2.14$ m/s, and $\gamma = 1.30 \pm 1.45$ m/s. From the mass ratio above, this implies a semiamplitude for planet d of $K_d = 4.52 \pm 0.97$ m/s. We now have enough information to estimate the stellar and planetary masses; these results are shown in Table \ref{ExampRes}. 
 
-\begin{deluxetable*}{ccccc}
-	\tabletypesize{\footnotesize}
-	\tablecolumns{5}
-        \tablecaption{Mass Estimates for Kepler-18 system}
-        \tablehead{ \colhead{Object} & \colhead{C11} & \colhead{L12} & \colhead{Analytic Result\tablenotemark{a}} & \colhead{Dynamical Estimate\tablenotemark{b}}}
-        \startdata
+\begin{table}[hbt!]
+\footnotesize
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+Object & C11 & L12 & Analytic Result$^{1}$ & Dynamical Estimate$^2$ \\
+\hline
         Star ($M_\odot$) & $0.972 \pm 0.042$ & Assumed C11 &  $0.83 \pm 0.51$ & $0.92 ^{+ 0.61} _{-0.40}$ \\
         Planet c ($M_\oplus$) & $17.3 \pm 1.8$ & $20.2 \pm 1.9$ & $18.6 \pm 11.6 $ & $14.8 ^{+9.4} _{-6.0}$ \\
-        Planet d ($M_\oplus$) & $16.4 \pm 1.4 $ & $17.4\pm 1.2$ & $15.4 \pm 9.5 $ & $15.4 ^{+11.0} _{-7.0}$ 
-        \enddata 
+        Planet d ($M_\oplus$) & $16.4 \pm 1.4 $ & $17.4\pm 1.2$ & $15.4 \pm 9.5 $ & $15.4 ^{+11.0} _{-7.0}$ \\
+\hline
+\end{tabular}
+\end{center}
+        $^1$Result derived by applying Equations 11-13 \\
+        $^2$Result determined from numerical integrations 
         
-        \tablenotetext{a}{Result derived by applying Equations 11-13}
-        \tablenotetext{b}{Result determined from numerical integrations}
-   
-        \label{ExampRes}
-\end{deluxetable*}
+\caption{Mass estimates for Kepler-18 system}
+\label{ExampRes}
+\end{table}
 
 When both the RV and TTV amplitudes are measured without invoking the extra constraint of Equation \ref{Mratio}, two independent measurements of the stellar mass can be calculated, one through $K$ and $V^\prime$, and one through $K^\prime$ and $V$. However, since our value for $K^\prime$ is found by assuming a value for $K$, we only calcuate one independent measure of the stellar mass. We find a stellar mass of $0.83 \pm 0.51 M_\odot$, consistent with that found by C11. We find the masses of planets c and d to be $18.6 \pm 11.6$ and $15.4 \pm 9.5 M_\oplus$, respectively.
 
@@ -166,8 +174,9 @@ In all cases, our uncertainties are dominated by our $20 \%$ errors in the radia
 We find that, with 30 more radial velocity observations, the uncertainty in our calculation drops by nearly a factor of two, from the current 61 percent to 33 percent. To provide substantially better than 33 percent uncertainties without obtaining 50 radial velocity measurements, we can target a less massive star. As stated in \S \ref{S:Intro}, this method will be optimal for stars for which evolutionary models are less able to constrain stellar parameters precisely, such as F-type stars, subgiants, and M-dwarfs. Since M-dwarfs are less massive than their G-type counterparts, a given mass planet around an M-dwarf produces a comparatively larger RV signal. Since the mass uncertainties will generally be dominated by the Doppler uncertainty, focusing on low-mass stars will enhance the observed signal, allowing for more meaningful mass constraints to be set. As proof, we again simulate observations of orbiting planets, but with larger values for $K$, corresponding to a less massive star or more massive planets. By sampling at the same times and assuming the same statistical errors and jitter levels, the fractional error in $K$ decreases significantly for a fixed number of observations. These results are also shown in Fig. \ref{RVerrors} (dashed lines). For example, a planet identical to Kepler-18 c orbiting a star of mass $M = 0.33 M_\odot$ would produce a semiamplitude $K = 15$ m/s; with only 20 observations the RV semiamplitude could be constrained to within 8 percent and the stellar mass to within 30 percent. It is worth noting that these observations are all simulated assuming similar levels of statistical noise as the Kepler-18 observations. This is a reasonable approximation for the stars hosting Kepler Objects of Interest, but these stars are considerably fainter than the average Doppler planet search target. If transit timing variations are detected around a considerably brighter star, as one would expect from next-generation space-based planet finding missions, radial velocity observations could be carried out to considerably higher precision, decreasing the number of observations required to precisely measure the stellar radial velocity semiamplitude.
 
 \begin{figure}[htbp]
-\centerline{\includegraphics[width=0.49\textwidth]{f1.eps}}
-\caption{ Derived fractional errors in the Doppler semiamplitude measurement as a function of number of radial velocity observations taken, for various values of $K$, the Doppler semiamplitude. For all observations, the same statistical uncertainties and RV jitter levels are assumed. The jitter level is 3 m/s, a reasonable estimate for all but the youngest dwarf stars. From top to bottom, these curves represent semiamplitudes of $[7, 11, 15, 19, 23]$ m/s. For a system like Kepler-18, where $K \approx 7$ m/s, many more measurements would be required to constrain $K$ to five percent (and thus the stellar mass to 15 percent). However, for a system with either larger planets or a smaller star, this level of precision could be reached with fewer observations.
+\centerline{\includegraphics[width=0.75\textwidth]{chapter2/f1.eps}}
+\caption[Simulated RV precision as a function of the number of
+observations for specified Doppler semiamplitudes]{Derived fractional errors in the Doppler semiamplitude measurement as a function of number of radial velocity observations taken, for various values of $K$, the Doppler semiamplitude. For all observations, the same statistical uncertainties and RV jitter levels are assumed. The jitter level is 3 m/s, a reasonable estimate for all but the youngest dwarf stars. From top to bottom, these curves represent semiamplitudes of $[7, 11, 15, 19, 23]$ m/s. For a system like Kepler-18, where $K \approx 7$ m/s, many more measurements would be required to constrain $K$ to five percent (and thus the stellar mass to 15 percent). However, for a system with either larger planets or a smaller star, this level of precision could be reached with fewer observations.
   }
 
 \label{RVerrors}
@@ -195,16 +204,12 @@ With present data our technique is only viable as an alternative to stellar mode
 
 Despite the faintness of the \kep\ planet candidate host stars, there are a few stars that would be ideal candidates for applications of our method. From the collection of Kepler Objects of Interest, we searched for stars hosting at least two transiting planets each with $P < 25$ days. We required at least one planet to be larger than 2 $R_\oplus$ and the planet periods to lie within five percent of a first-order mean-motion resonance. To ensure that all targets were optimized for radial velocity follow-up, we eliminated all targets fainter than $m_{\textrm{Kp}} = 13.0$. After making these cuts, we find 8 candidate systems to which this technique can be applied: KOI 85, 111, 115, 117, 244, 304, 1241 and 1930. As stated earlier in this section, KOI 1241 is not an ideal target because it has not been fully damped of its primordial eccentricity and there is not enough radial velocity information to uniquely determine the eccentricity of both planets. Of the remaining 7 systems, the CPS team has collected more than 10 radial velocity measurements only on one, KOI 244. Additional radial velocity measurements of any or all of the above systems would enable further validation of our procedure as well as additional constraints on the masses of each of the stars and their planets. Moreover, next-generation planet finding missions, such as TESS \citep{Brown08} and PLATO \citep{Catala10} will target bright stars, making detailed radial velocity follow-up observations of systems exhibiting transit timing variations a much more practical possibility. 
 
-
-
-\LongTables
-\begin{deluxetable}{lcccc}
-\tablecaption{Transit Times for Kepler Transiting Planet Candidates\label{tabTTs}}
-\tablehead{
-\colhead{KOI} & \colhead{ n } & \colhead{ $t_n$}    &  \colhead{TTV$_n$} & \colhead{ $\sigma_n$} \\ 
-   \colhead{}  &   \colhead{}     &  \colhead{BJD-2454900} &  \colhead{(d)}  &  \colhead{(d)} }
-\startdata
-
+{\footnotesize
+\begin{longtable}{lcccc} 
+\hline
+KOI & n & $t_n$ & TTV$_n$ & $\sigma_n$ \\
+    &   & (BJD-2454900) & (d) & (d) \\
+\hline
 137.01 & 0 & 198.3142 & -0.0006 &  0.0012 \\
 137.01 & 1 & 205.9557 &  0.0002 &  0.0013 \\
 137.01 & 2 & 213.5973 &  0.0019 &  0.0018 \\
@@ -322,10 +327,9 @@ Despite the faintness of the \kep\ planet candidate host stars, there are a few 
 137.02 & 40 & 789.2408 & -0.0034 &  0.0010 \\
 137.02 & 41 & 804.0997 & -0.0052 &  0.0010 \\
 137.02 & 42 & 818.9587 &  0.0003 &  0.0013 \\
-
-
-
-\enddata
+\hline
+\caption{Transit times for \kep\ transiting planet candidates
+in the KOI-137 system}
 \label{TTTable}
-\end{deluxetable}
-
+\end{longtable}
+}

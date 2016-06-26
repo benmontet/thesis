@@ -9,7 +9,7 @@
 \usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage{xcolor}
-
+\usepackage{longtable}
 
 %\usepackage{todonotes}
 
@@ -73,7 +73,6 @@
 
 % Name of your .bib file(s)
 \addbibresource{exopapers.bib}
-\addbibresource{example.bib}
 
 \begin{document}
 
@@ -101,8 +100,9 @@ I am extremely grateful to everyone who has helped me get to Caltech, as well as
 who have helped me through these past five years.
 Of course, this list must begin with my parents: thank you for all your support and
 encouragement over the past 27 years.
-I also want to thank my fifth grade teacher, Mrs. Kim Klappauf, for always being so
+I also want to thank my fifth grade teacher, Mrs.\ Kim Klappauf, for always being so
 enthusiastic and showing us that being into science was cool.
+
 I want to thank my advisor, John Johnson, and everyone involved in the Exolab during 
 my time. 
 That (long!) list includes Justin Crepp, Phil Muirhead, Leslie Rogers,
@@ -125,7 +125,7 @@ for being so amazing, especially Ruth, Dan, Robert, Megan, Ben, Angie, and Gal.
 I want to thank the Caltech Astronomy graduate students for being the friendliest, 
 most pleasant classmates and friends one could ask for. 
 I particularly want to thank (in no particular order) Mislav, Antonija, Trevor, Allison, Yi, Matt, Sirio,
-Gwen, Drew, and Ryan. 
+Gwen, Drew, Ryan and Donal. 
 To my officemates Walter, Shriharsh, Drew, Sirio, and Mislav: thank you for putting up
 with me. Sorry I took away your couch (if it's any consolation, it looks nice in my 
 apartment.)
@@ -245,36 +245,9 @@ the large number of TTV systems that will be discovered by current and future tr
 missions combined with advances in precision RV spectroscopy leave this method as a viable
 possibility in order to characterize stars that are not well-explained by stellar models.
 
-%\input{chapter2/masses.tex}
-
-\begin{figure}[hbt!]
-\centering
-\includegraphics[width=.3\textwidth]{caltech.png}
-\caption[Example Figure]{This is a figure}
-\label{fig:logo}
-\end{figure}
-
-\subsection{This is a subsection}
-
-\begin{table}[hbt!]
-\centering
-\begin{tabular}{ll}
-\hline
-Area & Count\\
-\hline
-North & 100\\
-South & 200\\
-East & 80\\
-West & 140\\
-\hline
-\end{tabular}
-\caption[Table]{This is a table}
-\label{tab:sample}
-\end{table}
+\input{chapter2/masses.tex}
 
 
-
-\btmtodo{This is the Dynamical Masses TTV paper}
 
 
 \chapter{This is the Third Chapter}
@@ -304,6 +277,31 @@ West & 140\\
 
 \chapter{This is the Eighth Chapter}
 \label{chap:wfirst}
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=.3\textwidth]{caltech.png}
+\caption[Example Figure]{This is a figure}
+\label{fig:logo}
+\end{figure}
+
+\subsection{This is a subsection}
+
+\begin{table}[hbt!]
+\centering
+\begin{tabular}{ll}
+\hline
+Area & Count\\
+\hline
+North & 100\\
+South & 200\\
+East & 80\\
+West & 140\\
+\hline
+\end{tabular}
+\caption[Table]{This is a table}
+\label{tab:sample}
+\end{table}
 
 \btmtodo{This is WFIRST}
 
