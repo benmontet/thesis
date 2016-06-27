@@ -10,6 +10,8 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{deluxetable}
 
 %\usepackage{todonotes}
 
@@ -70,9 +72,12 @@
 \newcommand{\nat}{Nature}
 \newcommand{\aapr}{Astronomy and Astrophysics Review}
 \newcommand{\actaa}{Acta Astronomica}
+\newcommand{\araa}{Annual Review of Astron. and Astrophys.}
+\newcommand{\aaps}{Astronomy and Astrophysics, Supplement}
 
 % Name of your .bib file(s)
 \addbibresource{exopapers.bib}
+
 
 \begin{document}
 
@@ -250,11 +255,26 @@ possibility in order to characterize stars that are not well-explained by stella
 
 
 
-\chapter{This is the Third Chapter}
+\chapter{The Occurrence Rate of Giant Planets around M Dwarfs}
 \label{chap:trends}
 
+In this chapter I develop a method to determine the occurrence
+rate of giant planets in wide orbits around their host stars.
+These planets are large enough to cause a slow drift, or trend, in 
+the RV of their host star, but too distant from their star to
+observe the full orbit on a reasonable timescale.
+Such a trend could be caused by a planet, or a star on a much
+wider orbit. As stars would be easily observable with high-contrast
+direct imaging, the existence of a trend combined with an AO 
+non-detection suggests the presence of a planet is likely.
+The definitive presence of any single planet can not be 
+determined, but by analyzing a population of these systems their
+bulk occurrence can be measured.
+This chapter was originally published as ``The TRENDS High-contrast Imaging Survey. IV. The Occurrence Rate of Giant Planets around M Dwarfs,'' ApJ, 781, 28 (2014) by BTM, Justin Crepp, John Johnson,
+Andrew Howard, and Geoff Marcy. 
 
-\btmtodo{This is TRENDS IV}
+
+\input{chapter3/jupiters.tex}
 
 \chapter{This is the Fourth Chapter}
 \label{chap:lhs1}
@@ -304,6 +324,7 @@ West & 140\\
 \end{table}
 
 \btmtodo{This is WFIRST}
+\btmtodo{Replace arXiv listings in bibliography that are old}
 
 \chapter{Summary and Future Directions}
 \label{chap:summary}
@@ -312,7 +333,7 @@ West & 140\\
 
 
 
-\printbibliography[heading=bibintoc]
+\printbibliography[]
 %\bibliography{exopapers}
 
 %\appendix
