@@ -12,6 +12,7 @@
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage{deluxetable}
+\usepackage[CaptionAfterwards]{fltpage}
 
 %\usepackage{todonotes}
 
@@ -43,24 +44,52 @@
 \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
 \newcommand{\rsun}{{R$_\odot$}}
 \newcommand{\msun}{{M$_\odot$}}
-\newcommand{\kep}{{\textit Kepler}}
-\newcommand{\KT}{{\textit K2}}
+\newcommand{\lsun}{{L$_\odot$}}
+\newcommand{\kep}{{\textit {Kepler}}}
+\newcommand{\itk}{{\textit {Kepler}}}
+\newcommand{\KT}{{\textit {K2}}}
+\newcommand{\WF}{{\textit {WFIRST}}}
 \newcommand{\eg}{{\it e.g.}}
 \newcommand{\ie}{{\it i.e.}}
-\newcommand{\spitz}{{\textit Spitzer}}
+\newcommand{\spitz}{{\textit {Spitzer}}}
 \newcommand{\vsini}{{$V \sin i$}}
-\newcommand{\teff}{$T_{\rm eff}$}
+\newcommand{\teff}{$T_{\textrm eff}$}
 \newcommand{\kms}{{km\,s$^{-1}$}}
 \newcommand{\gcc}{{g\,cm$^{-3}$}}
 \newcommand{\rstar}{{$R_\star$}}
 \newcommand{\mstar}{{$M_\star$}}
 \newcommand{\rhostar}{{$\rho_\star$}}
+\newcommand{\logg}{{log(g)}}
+\newcommand{\mh}{{[M/H]}~}
+\newcommand{\feh}{{[Fe/H]}~}
 \newcommand{\mearth}{{M$_\oplus$}}
 \newcommand{\rearth}{{R$_\oplus$}}
 \newcommand{\mjup}{{M$_\textrm{Jup}$}}
 \newcommand{\rjup}{{R$_\textrm{Jup}$}}
+\newcommand{\LA}{{LHS\,6343\,A}}
+\newcommand{\LB}{{LHS\,6343\,B}}
+\newcommand{\LC}{LHS\,6343\,C}
+\newcommand{\LHS}{{LHS\,6343}}
+\newcommand{\ira}{{3.6$\mu$m}}
+\newcommand{\irb}{{4.5$\mu$m}}
+\newcommand{\thisstarsix}{GJ\,3305}
+\newcommand{\rprs}{{$R_p/R_{\star}$}}
+\newcommand{\ars}{{$a/R_{\star}$}}
+\newcommand{\project}[1]{\textsl{#1}}
+\newcommand{\Ci}{Campaign~1}
+\newcommand{\afe}{{[$\alpha$/Fe]}~}
+\newcommand{\dd}{{\ensuremath{\,\mathrm{d}}}}
+\newcommand{\paperip}{\citep{Foreman-Mackey15}}
+\newcommand{\paperit}{\citet{Foreman-Mackey15}}
 
-\newcommand{\procspie}{SPIE Proceedings}
+\newcommand{\Nfp}{6}
+\newcommand{\Nvalidated}{21}
+\newcommand{\Nlimbo}{9} %adds up to 36
+\newcommand{\Nvalnew}{17} % 4 previously validated
+
+
+
+\newcommand{\procspie}{Proc. SPIE}
 \newcommand{\aj}{AJ}
 \newcommand{\pasp}{PASP}
 \newcommand{\apj}{ApJ}
@@ -70,10 +99,12 @@
 \newcommand{\mnras}{MNRAS}
 \newcommand{\sci}{Science}
 \newcommand{\nat}{Nature}
-\newcommand{\aapr}{Astronomy and Astrophysics Review}
+\newcommand{\aapr}{A\&A Rev.}
 \newcommand{\actaa}{Acta Astronomica}
-\newcommand{\araa}{Annual Review of Astron. and Astrophys.}
-\newcommand{\aaps}{Astronomy and Astrophysics, Supplement}
+\newcommand{\araa}{ARA\&A}
+\newcommand{\aaps}{A\&AS}
+\newcommand{\planss}{Planet. Space Sci.}
+\newcommand{\icarus}{Icarus}
 
 % Name of your .bib file(s)
 \addbibresource{exopapers.bib}
@@ -227,7 +258,7 @@ will be found around M dwarf hosts.
 
 \chapter{Introduction}
 
-\input{chapter1/intro.tex}
+%\input{chapter1/intro.tex}
 
 
 
@@ -250,7 +281,7 @@ the large number of TTV systems that will be discovered by current and future tr
 missions combined with advances in precision RV spectroscopy leave this method as a viable
 possibility in order to characterize stars that are not well-explained by stellar models.
 
-\input{chapter2/masses.tex}
+%\input{chapter2/masses.tex}
 
 
 
@@ -274,62 +305,104 @@ This chapter was originally published as ``The TRENDS High-contrast Imaging Surv
 Andrew Howard, and Geoff Marcy. 
 
 
-\input{chapter3/jupiters.tex}
+%\input{chapter3/jupiters.tex}
 
-\chapter{This is the Fourth Chapter}
+\chapter{Physical Properties of the Transiting Brown Dwarf LHS\,6343\,C}
 \label{chap:lhs1}
 
-\btmtodo{This is LHS Part 1}
-\chapter{This is the Fifth Chapter}
 
-\btmtodo{This is LHS Part II}
+In this chapter I focus on LHS\,6343\,C, a brown dwarf transiting one member of an M+M binary in the \kep\ field.
+Given the relative brightness of the host star and the high signal-to-noise ratio on the individual transits themselves,
+analyzing this system was a test of the limits of \kep\ data: given a sufficiently high signal transit, what limits our precision?
+Are there any assumptions we often make, such as details of limb darkening, that will eventually break down? 
+Are there any robust methods to characterize the star without relying on the fine details of any particular set of stellar models?
+This chapter was originally published as ``Characterizing the Cool KOIs. VII. Refined Physical Properties of the Transiting Brown Dwarf LHS\,6343\,C,'' ApJ, 800, 134 (2015) by BTM, John Johnson, Phil Moorhead, Ashley Villar, Corinne Vassallo,
+Cristoph Baranec, Nick Law, Reed Riddle, Geoff Marcy, Andrew Howard, and Howard Isaacson.
+
+%\input{chapter4/main.tex}
+
+\chapter{Spitzer Secondary Eclipse Observations of LHS\,6343\,C Yield Brightness Temperature and mid-T Spectral Class}
+
 \label{chap:lhsspitz}
+In this chapter I continue the discussion of LHS\,6343\,C.
+Given the precise mass and radius measured in the previous chapter, we considered what observations would be necessary
+to compare this object to the field brown dwarfs with well-characterized atmospheres but no direct measurements of
+their masses and radii.
+We concluded the best opportunity to measure the atmosphere of the brown dwarf would be through secondary eclipses
+observations of the system as observed with \spitz, leading to a successful Cycle-10 proposal to observe four eclipses, 
+two in each \spitz\ bandpass.
+In this chapter I analyze these data and compare them to both theoretical models of brown dwarfs and empirical observations
+of field brown dwarfs.
+This chapter was originally published as ``Benchmark Transiting Brown Dwarf LHS\,6343\,C: Spitzer Secondary Eclipse Observations Yield Brightness Temperature and mid-T Spectral Class,'' ApJL, 822, 6 (2016) by BTM, John Johnson,
+Jonathan Fortney, and Jean-Michel Desert.
 
-\chapter{This is the Sixth Chapter}
+%\input{chapter5/main.tex}
+
+\chapter{Masses and Orbital Parameters of GJ\,3305\,AB, the Wide Binary Companion to the Imaged Exoplanet Host 51\,Eri}
 \label{chap:Mbinaries}
 
-\btmtodo{This is the M+M binary work}
+In this chapter I continue comparing observations of low-mass stars to predictions from theoretical models.
+Throughout my graduate studies I have led a long-term program to measure masses of M dwarfs in young moving groups
+through astrometric and RV observations of their orbits using the Differential Speckle Survey Instrument (DSSI) at the 
+Discovery Channel Telescope and Gemini Observatory and the Tillinghast Reflector Echelle Spectrograph at 
+Mt. Hopkins.
+As we must observe a substantial fraction of the orbit before we can determine a unique mass, this is a long-term project
+not intended to be completed during this thesis.
+As a part of this thesis, we published the first results from this survey, outlining our methods and presenting the first binary
+system with a closed orbit, the GJ\,3305\,AB binary.
+This chapter was originally published as ``Dynamical Masses of Young M Dwarfs: Masses and Orbital Parameters of GJ 3305 AB, the Wide Binary Companion to the Imaged Exoplanet Host 51 Eri,'' ApJL, 813, 11 (2015) by BTM, Brendan Bowler, 
+Evgenya Shkolnik, Katherine Deck, Ji Wang, Elliott Horch, Michael Liu, Lynne Hillenbrand, Adam Kraus, and Dave 
+Charbonneau.
 
-\chapter{This is the Seventh Chapter}
+
+%\input{chapter6/main.tex}
+
+\chapter{Stellar and Planetary Properties of \KT\ Campaign~1 Candidates and Validation of 17 Planets, Including a Planet Receiving Earth-like Insolation}
 \label{chap:k2}
+In the final two science chapters I turn my attention to large surveys. The first of these is \KT\ the extended \kep\ mission.
+The large systematics inherent to \KT\ data make detecting planets more challenging than in \kep; the stellar target list is
+put together only months before each field as a conglomeration of many other catalogs, making stellar parameters uncertain
+and potentially systematically biased.
+Here, we attempt to solve both of these issues.
+Following a systematic search for transiting planets, we combine RV data, AO imaging, and archival data on the stars to
+better infer stellar parameters and statistically validate the transiting planets, applying our methods to Campaign 1 of the
+\KT\ mission.
+We validate 17 planets, including one which receives an Earth-like level of insolation and has an equilibrium temperature of $272 \pm 15$ K.
+This chapter was originally published as ``Stellar and Planetary Properties of K2 Campaign 1 Candidates and Validation of 17 Planets, Including a Planet Receiving Earth-like Insolation,'' ApJ, 809, 25 (2015) by BTM, Tim Morton, Dan Foreman-Mackey,
+John Johnson, David Hogg, Brendan Bowler, Dave Latham, Allyson Bieryla, and Andrew Mann.
 
-\btmtodo{This is the K2 planet catalog}
+\input{chapter7/ms.tex}
 
-\chapter{This is the Eighth Chapter}
+\chapter{Measuring the Galactic Distribution of Transiting Systems with \WF}
 \label{chap:wfirst}
+Finally, I consider the possibility of \WF\ to act as a transit search mission.
+Designed to search for signals of planets gravitationally microlensing more distant stars, the survey
+requires high precision observations of millions of stars at a 15-minute cadence, ideal to detect
+transiting planets.
+I explore what kinds of planets we would hope to detect from this mission, finding that it could discover more than 30,000
+transiting planets, largely hot Jupiters.
+I then consider what observations would be required to confirm or validate these planets, finding that the small planets
+will be most easily detectable when they are in dynamically interacting multiple-planet systems through the detection of
+TTVs.
+Giant planets, on the other hand, will be able to be confirmed through direct detection of their secondary eclipses.
+This chapter will be submitted to the Astrophysical Journal as ``Measuring the Galactic Distribution of Planets with \WF'' by
+BTM, Jennifer Yee, and Matthew Penny.
 
-\begin{figure}[hbt!]
-\centering
-\includegraphics[width=.3\textwidth]{caltech.png}
-\caption[Example Figure]{This is a figure}
-\label{fig:logo}
-\end{figure}
 
-\subsection{This is a subsection}
 
-\begin{table}[hbt!]
-\centering
-\begin{tabular}{ll}
-\hline
-Area & Count\\
-\hline
-North & 100\\
-South & 200\\
-East & 80\\
-West & 140\\
-\hline
-\end{tabular}
-\caption[Table]{This is a table}
-\label{tab:sample}
-\end{table}
+
 
 \btmtodo{This is WFIRST}
 \btmtodo{Replace arXiv listings in bibliography that are old}
+\btmtodo{remove eids in the biblio}
+\btmtodo{Make sure you don't have words running over into the right margin}
+\btmtodo{spell check!}
+
 
 \chapter{Summary and Future Directions}
 \label{chap:summary}
 
-\input{chapter9/summary.tex}
+%\input{chapter9/summary.tex}
 
 
 
