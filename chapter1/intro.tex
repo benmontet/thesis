@@ -1,8 +1,56 @@
+\section{The M Dwarf Spectral Class}
+Type M dwarfs were a part of the original Draper Catalogue of Stellar Spectra \citep{Pickering90}, 
+classified as having weak but non-zero hydrogen absorption features in their spectra.
+The system was alphabetical: they were classified between K and O stars, 
+the former having stronger hydrogen absorption and the latter none at all.
+With the development of the Harvard system, \citet{Cannon01} preserved the M spectral class and placed it
+at one end of the classification system, next to K stars.
+We now know that M and O stars have little hydrogen absorption in their atmospheres for very different reasons
+and the modern classification system maps stellar effective temperature: M dwarfs are the coolest main-sequence
+stars and the least massive hydrogen burning stars in the galaxy.
+Today, the boundary between K and M dwarfs is defined by the presence of titanium oxide (TiO) bands in the
+atmospheres of M dwarfs \citep{Kuiper38, Morgan38}, which can form when a star's effective temperature is below approximately 3500 K.
+
+Often, we consider M dwarfs as a single, monolithic block.
+This view overlooks the incredible diversity in M dwarf physics.
+The M dwarf class spans an order of magnitude in mass, 
+an order of magnitude in radius, and
+a factor of 40 in luminosity \citep{Veeder74}.
+There are significant changes in the structure of the stars across this class as well.
+Below approximately 0.35 \msun, M dwarfs become fully convective, leading to a
+rapid decrease in the radius and luminosity of stars just below this boundary \citep{Chabrier97}.
+
+At the late edge of the M dwarf class are brown dwarfs, objects without high enough central densities to 
+fuse hydrogen. 
+As a brown dwarf leaves the T Tauri stage of stellar evolution it has a temperature of approximately 3000 K
+and a spectrum consistent with that of a mid-M dwarf.
+Brown dwarfs then cool and evolve into ``late-type'' L, T, and eventually Y dwarfs at a rate 
+which depends on their mass.
+I will discuss the evolution of brown dwarfs more fully in Section \ref{sec:BDs}.
+
+
+
+
+We can contrast the diversity in M dwarfs with the uniformity in Sunlike stars. 
+The Sun has a radiative core, in which nuclear reactions are dominated by the p-p chain, and a convective 
+outer layer, which contributes to the existence of a magnetic field.
+The same is true for all main-sequence stars from the middle of the F spectral class through early M dwarfs: 
+in terms of their structure, F7 and K3 
+dwarfs have more in common than M0 and M9 dwarfs.
+If the abundance of M dwarfs and the diversity of their structure had been understood at the time of the development 
+of the Harvard stellar classification system, it is possible that these stars would have been awarded more than a 
+single spectral type.
+
+
 \section{M Dwarfs: The Silent Majority}
-For much of the timescale of stellar astrophysics research, to a fanatic 
-of M dwarf stars their history is a story of neglect and underappreciation.
 The first spectrum of an M dwarf was obtained only 100 years ago when 
-\citet{Adams13} collected an observation of the M+M binary Groombridge 34.
+\citet{Adams13} collected an observation of the M+M binary Groombridge 34.\footnote{The
+Draper catalogue was first published in 1890 and the
+Harvard stellar classification scheme in 1901. 
+All of the early work in stellar spectroscopic classification of M dwarfs is based on
+spectroscopy of M giants: there were no main sequence stars used to create the stellar class in which 
+75\% of main sequence stars reside.}
+
 The oldest known surviving diagram plotting stellar absolute magnitude against spectral type \citep{Russell14}, now known as a Hertsprung-Russell Diagram, includes hundreds of stars, as shown in Figure \ref{fig:HR}.
 Today we know that M dwarfs make up approximately 75\% of the stars in the galaxy,
 yet only $\sim$5\% of the stars included in Russell's figure are listed as
@@ -20,7 +68,7 @@ maps approximately to stellar effective temperature.}
 \label{fig:HR}
 \end{figure}
 
-Russell and others hold no personal grudge against M dwarfs. The problem stems from the physics
+The lack of M dwarfs included in these early studies stems from the physics
 of M dwarfs themselves, specifically the stellar mass-luminosity relation.
 To show this, let us begin with the equations of stellar structure.
 The first of these declares a star is in hydrostatic equilibrium:
@@ -122,7 +170,8 @@ Planets do not orbit their host stars.
 Planets and stars, like any pair of bodies orbiting each other, orbit their common
 center of mass, or barycenter.
 For circular orbits, the planet and star velocities are constant, and the observed
-radial component of the velocity is modulated sinusoidally with the period of the planet.
+radial component of the velocity is modulated sinusoidally with the period of the planet
+as the velocity vector changes direction.
 The magnitude of the RV signal in this case depends only the mass of the planet, $m$, 
 the mass of the star, $M$, the orbital period, $P$, and the unknown inclination $i$.
 Specifically, by taking the time derivative of the position of the star in time,
@@ -132,7 +181,9 @@ v_r = \bigg(\frac{2\pi G}{P}\bigg)^{1/3} \frac{m \sin i}{(M+m)^{2/3}} \cos{\nu}.
 \end{equation}
 Here, $G$ is Newton's constant and $\nu$ the mean anomaly of the planet, which in the circular case increases
 linearly from $0$ to $2\pi$ in time over the course of one orbit.
-For Jupiter, the Sun's reflex RV motion is 13 m s${-1}$; for Earth, 9 cm s$^{-1}$.
+For Jupiter, the Sun's reflex RV motion is 13 m s$^{-1}$; for Earth, 9 cm s$^{-1}$.
+We see that the velocity depends on the mass ratio between the planet and star, meaning
+that we can only characterize the planet as well as we understand the star.
 
 For planets on eccentric orbits, the math is more complicated.
 Again, the derivation begins with the time derivative of the position of the star, but
@@ -145,10 +196,10 @@ v_r = \bigg(\frac{2\pi G}{P}\bigg)^{1/3} \frac{m \sin i}{(M+m)^{2/3}} \frac{1}{\
 \end{equation}
 where $e$ is the eccentricity and $\omega$ the argument of periapse, the angle relative
 to the plane of the sky at which the planet and star make their closest approach.
-All other terms retain their previous meaning, but now the true anomaly does not 
-increase linearly in time.
-Therefore, we can easily measure the expected RV of the star at any position in its 
-orbit, but do not necessarily know what time the star will be at that position.
+All other terms retain their previous meaning, but from Kepler's second law, the true anomaly 
+no longer increases linearly in time.
+While we can easily measure the expected RV of the star at any position in its 
+orbit, we do not know the time at which the star will be at that position.
 
 To calculate the expected RV at a given time, we invoke the mean anomaly, which represents the mean angular motion of the 
 two bodies. 
@@ -157,6 +208,7 @@ be calculated such that
 \begin{equation}
 M = \frac{2\pi}{P}(t-\tau).
 \end{equation}
+It therefore increases linearly in time from 0 to $2\pi$.
 The true anomaly can be calculated from the mean anomaly through the eccentric anomaly, 
 $E$, such that
 \begin{equation}
@@ -169,26 +221,28 @@ such that
 \tan \frac{\nu}{2} = \sqrt{\frac{1+e}{1-e}} \tan \frac{E}{2}.
 \end{equation}
 With that, we can solve Equation \ref{eq:rv} and measure the RV of a star at any time.
+We note that all three anomalies are identical in the circular case.
 
 Of course, we can only use these equations if we can measure variations in the stellar RV
 itself.
-Fortunately, we can leverage narrow stellar absorption lines for this purpose.
+Fortunately, we can leverage stellar atmospheres for this purpose.
 Stars with masses below $\approx 1.3$ \msun\ have convective outer layers, generating
-magnetic activity which provides a torque as charged particles follow magnetic
-field lines as they escape from their host star \citep{Shu94}.
+magnetic activity which provides a torque as charged particles escape their 
+host star along magnetic
+field lines \citep{Shu94}.
 The spin-down is a predictable function of the star's mass and age, leading to the use
 of rotation rates as a probe of stellar ages \citep{Barnes03}.
 G dwarfs at the age of the Sun rotate at only 1 km s$^{-1}$ at their equators.
 With a full spectrum of spectral lines to consider, the RV of the star can be 
 measured to 2-5 m s$^{-1}$ depending on the instrument.
 At this level, systematic effects induced by the instrument can dominate over any planetary
-signal: the resolution of Keck/HIRES is 48,000 in the typical mode used for planet searches,
-leading to a pixel scale of 6.2 km s$^{-1}$ pixel$^{-1}$.
+signal: in the typical mode used for planet searches,
+the resolution of Keck/HIRES is 48,000, leading to a pixel scale of 6.2 km s$^{-1}$ pixel$^{-1}$.
 To combat this, one of two approaches are taken.
 At Keck/HIRES, observers place an iodine cell in the light path before the starlight
 enters the instrument itself \citep{Butler96}.
 Iodine has many absorption features in the optical with precisely known wavelengths,
-enabling this cell create a precise, stable wavelength scale to compare against the stellar
+so the cell creates a precise, stable wavelength scale to compare against the stellar
 signal. 
 The iodine also provides information about the shape of the instrumental profile during
 each observation.
@@ -204,7 +258,7 @@ The first radial velocity (RV) planet searches focused almost exclusively on Sun
 which magnetic braking occurs, leading to slow rotation.
 
 The first planet detected around a main sequence star other than the Sun was discovered
-in 1995 with the detection of 51\,Peg\,b, a planet with an orbital period of 4.23 days
+in 1995 with the detection of 51\,Pegasi\,b, a planet with an orbital period of 4.23 days
 and a mass of $0.472 \pm 0.039$ \mjup\ \citep{Mayor95}.
 Quickly, dozens of similar ``hot Jupiter'' planets with masses larger than Saturn but 
 periods around three days were discovered \citep[e.g.][]{Marcy98, Butler97, Wright07}.
@@ -217,21 +271,21 @@ However, when these stars evolve off the main sequence onto the subgiant branch,
 conservation of angular momentum results in a large increase in the rotation period and
 thus a decrease in $v \sin i$, making these stars amenable to RV planet searches.
 These ``Retired A stars'' were found to have fewer hot Jupiters than their less massive
-counterparts, but a higher giant planet occurrence rate in general \citep{Johnson07b,
+counterparts, but a higher giant planet occurrence rate overall \citep{Johnson07b,
 Johnson11b, Bowler10}.
 
 M dwarfs have many narrow spectral features and make ideal planet search targets as
 long as they are near enough to be observable.
 Nearly immediately, researchers detected giant planets around M dwarfs \citep{Butler04, Butler06}, but the occurrence rate of giant planets around M dwarfs was found to be 
-considerably lower than around higher mass stars with
-only $\approx 3\%$ of M dwarfs hosting a planet at least as massive as Jupiter 
+considerably lower than around higher mass stars.
+Only $\approx 3\%$ of M dwarfs host a planet at least as massive as Jupiter 
 within 2.5 AU \citep{Johnson10a, Bonfils13}.
 These surveys also showed a correlation between giant planet occurrence and stellar
 metallicity \citep{Fischer05, JohnsonApps09}.
 
 
 
-In 2016, nearly 600 planets have been discovered through RV observations.
+To date nearly 600 planets have been discovered via RV variations.
 These results show hot Jupiters orbit approximately 1\% of Sunlike stars \citep{Wright12}.
 They also show that 10\% of systems have a Saturn-mass or larger planet with orbital periods
 shorter than 2000 days \citep{Cumming08}.
@@ -239,16 +293,17 @@ By extrapolating the observed distribution outward, the same authors predict 20\
 
 Despite the large numbers of planets detected so far, RV surveys have substantial
 limitations.
-There has been substantial work on improving RV precision in single observations, both
+There has been substantial work on improving RV precision, both
 in instrument development and in understanding stellar activity \citep{Fischer16}.
-Yet there is still work to do: even the smallest RV signal yet claimed as a planetary
+Yet there is still work to do: even the smallest RV signal claimed as a planetary
 detection has a Doppler amplitude larger than the Earth's by a factor of six
 \citep{Dumusque12}. 
-Worse yet, the planet's very existence has been called into question as possibly 
+Worse yet, the planet's very existence has been called into question:
+the purported signal may be
 an artifact of the stellar activity modeling techniques applied to the data
 \citep{Rajpaul16}.
 
-Similarly, RV surveys are generally only sensitive to planets which have completed
+RV surveys are generally only sensitive to planets which have completed
 one full orbit.
 For longer periods, there is a degeneracy between the companion mass and orbital period
 that cannot be broken without substantial curvature in the orbit, meaning planetary
@@ -263,6 +318,7 @@ In the case where the planet orbital period is significantly longer than the RV 
 the planet is observable as a long-term acceleration, or RV ``trend.''
 Any constraints on the companion properties are degenerate between the companion mass
 and separation.
+
 Many of these trends have been shown to be binary systems through direct imaging campaigns, in which case the full three-dimensional orbit of the companion can be 
 ascertained and the companion's mass directly measured \citep{Crepp12b, Crepp13a, Crepp13b}.
 In cases where imaging can rule out a binary we know the companion is likely a planet,
@@ -280,7 +336,7 @@ We can not resolve the surface of the star in order to image the transit itself,
 we can still detect it. 
 During the transit, a portion of the stellar disk is blocked, decreasing the observed
 flux from the star. 
-The size of this decrement, termed $\delta$, corresponds to the fractional area of the star's disk blocked by the planet:
+The size of this decrement, $\delta$, corresponds to the fractional area of the star's disk blocked by the planet:
 \begin{equation}
 \delta = \bigg(\frac{R_p}{R_*}\bigg)^2.
 \end{equation}
@@ -303,8 +359,8 @@ Transit searches can target many more stars than RV surveys.
 To a first order approximation, transits are achromatic, with the depth of the transit
 approximately equal at all wavelengths, so transits can be detected through broadband
 photometry.
-As RV surveys require high-resolution spectroscopy, they require comparatively brighter
-stars; transit searches can target significantly fainter stars, opening up the search
+As RV surveys require high-resolution spectroscopy, they require comparatively bright
+stars; transit searches can target much fainter stars, opening up the search
 for planets to many more M dwarfs.
 Similarly, as spectral features are no longer required, transit surveys can target 
 rapidly rotating massive stars without convective outer layers and narrow spectral lines.
@@ -340,7 +396,7 @@ To fully understand the atmosphere measured during transmission spectroscopy obs
 we want to understand the mass (and therefore the density) of the transiting planet as
 well.
 If the transiting planet is massive and the star a good RV target (bright and not 
-rapidly-rotating), RVs can be used to meaure a mass. 
+rapidly-rotating), RVs can be used to measure its mass. 
 Since the planet is known to be transiting, it must have $i \approx \pi/2$, so that
 $\sin i \approx 1$. 
 Unfortunately, the vast majority of transiting planets are too faint to make ideal
@@ -389,7 +445,8 @@ direct measurement of the mass; the transit detection made it the first planet o
 Shortly after came the first discovery of a planet via transit, OGLE-TR-56b \citep{Udalski02} from the Optical Gravitational Lensing Experiment (OGLE) mission.
 The primary goal of OGLE is to detect dark matter through microlensing, but it has also discovered 
 many planets via microlensing \citep{Sumi11, Cassan12}.
-Microlensing surveys are also ideal for the discovery of transiting planets, as 
+Microlensing surveys require a high photometric precision and a wide field of view so many stars can be
+observed. These are the same requires for transit surveys making them ideal for the discovery of transiting planets, as 
 I discuss in Chapter~\ref{chap:wfirst}.
 
 Transit surveys discovered 45 more planets between these initial discoveries and 2009, largely through dedicated surveys such as the Super-Wide Angle Search for Planets \citep[SuperWASP,][]{Street03}, the Hungarian Automated Telescope Network 
@@ -399,8 +456,6 @@ These planets were largely giant planets in short periods, similar to the early 
 detected by RV surveys. 
 
 In 2009, the \kep\ mission \citep{Borucki10} was launched and began taking data.
-At this point, the exoplanet community had discovered 45 planets via the transit
-method.
 The precision of \kep\ was significantly better than any previous mission, allowing
 20 part per million (ppm) photometry over six hours of observation on 12th magnitude
 stars. 
@@ -408,10 +463,10 @@ It also had a large field of view, staring at 100 square degrees of the northern
 Every 30 minutes, the telescope recorded photometry of approximately 180,000 stars in a
 search for periodic transits caused by small planets.
 
-Any combination of words less strong than ``tremendous success'' would significantly undersell the data from \kep.
+The \kep\ mission has been a tremendous success.
 The mission has discovered more than 4,700 planet candidates to date, with more than 
 2,300 of these being confirmed via other methods or statistically validated as planets
-to a high confidence \citep{Batalha13, Burke14, Mullally15, Rowe15, Morton16}.
+at high confidence \citep{Batalha13, Burke14, Mullally15, Rowe15, Morton16}.
 Most of the stars targeted by the mission are Sunlike FGK dwarfs, so most of the discovered
 planets transit Sunlike FGK dwarfs.
 However, there were approximately 5,000 M dwarfs in the original \kep\ target list, around
@@ -424,23 +479,20 @@ and others tightly packed in resonant chains with low eccentricities and mutual 
 \citet{Morton14} show that these planets are predominantly small, rocky planets in short
 periods around their host stars.
 
-Many papers have focused on the planets detected around M dwarfs, but there are ``only'' 100
-of them from the \kep\ mission around 5000 stars. As \kep\ is largely a magnitude-limited
+As \kep\ is largely a magnitude-limited
 survey, the majority of the M dwarfs surveyed are early M0 and M1 dwarfs. 
 Only 300 stars had an M2 or later spectral type in the original mission, and only 30 had
 an M4 or later spectral type.
-
 The \KT\ mission is providing an opportunity to rectify this oversight.
 With the failure of two reaction wheels on the \kep\ spacecraft in 2013, the telescope
-was left unable to point at the original \kep\ field, ending the primary mission.
+was left unable to point at its original field, ending the primary mission.
 The scientific and technical staff behind \kep\ then designed, with community input,
 a mission called \KT. 
 In this mission, the telescope uses the remaining two reaction wheels to point the telescope
 along the ecliptic plane, while the third axis is approximately balanced by solar radiation
 pressure.
-The telescope then rolls about its axis at approximately 1 arcsec hour$^{-1}$, which 
-the telescope corrects by periodically firing its thrusters in the opposite direction
-of the roll.
+The telescope then rolls about its axis at approximately 1 arcsec hour$^{-1}$, correcting the
+roll by periodically firing its thrusters in the opposite direction.
 In the \KT\ mission, the telescope is able to point at fields in the ecliptic plane for
 approximately 75 days at a time.
 By the end of the \KT\ mission, the telescope will point at approximately 20 fields
@@ -475,7 +527,7 @@ The physics of M dwarf atmospheres is more complicated as well.
 M dwarfs are defined by the presence of titanium oxide (TiO) bands in their
 atmospheres \citep{Kuiper38, Morgan38}, but also have molecular bands due to
 vanadium oxide (VO), carbon monoxide (CO), and water (H$_2$O) \citep[e.g.][]{Mould75, Muirhead12b}.
-As photos are more scarce, especially in the optical, longer integration times are 
+As photons are more scarce, especially in the optical, longer integration times are 
 required to study these stars just to detect the molecular features, much less
 understand them.
 
@@ -484,7 +536,7 @@ Attempts to understand M dwarf atmospheres and interiors typically depend on emp
 relations between photometric or spectroscopic parameters, calibrated to a few stars
 with known properties.
 These calibrators tend to be eclipsing binaries with directly measured masses and radii 
-\citet{Birkby12} or single, nearby stars with interferometrically measured radii \citep{Boyajian12}.
+\citep{Birkby12} or single, nearby stars with interferometrically measured radii \citep{Boyajian12}.
 For example, \citet{Delfosse00} use observations of 16 M dwarfs with known masses and
 luminosities to build a relationship between absolute $K$-band magnitude and stellar mass
 that enables mass measurements to approximately 10\% precision.
@@ -494,8 +546,8 @@ required observable is an absolute magnitude.
 More recently, \citet{RojasAyala12} developed a relation between the relative flux
 of an M dwarf at different wavelengths in the $K$-band and the star's temperature
 and metallicity.
-This method produces uncertainties on stellar parameters of approximately 10\%, without
-a direct parallax measurement, a method that has been applied to many of the M dwarfs
+This method produces uncertainties on stellar parameters of approximately 10\% without
+a direct parallax measurement and has been applied to many of the M dwarfs
 in \kep\ to infer stellar parameters \citep{Muirhead12b, Muirhead14}.
 \citet{Newton15} developed a relation between features in the $H$-band spectra of M dwarfs,
 finding they can be used to determine a stellar effective temperature with a residual
@@ -517,17 +569,60 @@ Measuring stellar masses of astrometric M+M binaries in young moving groups with
 ages provides a first, needed test of these models in order to constrain evolutionary models.
 
 \section{Brown Dwarfs}
-Brown dwarfs are typically the most massive of substellar objects. 
-The exact definition of what qualifies as a brown dwarf is a matter of dispute.
+\label{sec:BDs}
+
+\subsection{The History of Brown Dwarfs}
+
+
+A lower limit on the mass of stars was first proposed by \citet{Kumar63}, who applied models of completely
+convective stars to determine that stars below a certain mass (which he determined to be between 
+70 and 90 \mjup) would become completely degenerate before hydrostatic equilibrium was achieved.
+He termed these stars ``black dwarfs;'' a decade later, they were renamed ``brown dwarfs'' due to the 
+possibility that they may be luminous, especially in the near-IR and at young ages \citep{Tarter75}.
+
+While these objects were theorized, there was no evidence for their existence for more than two decades.
+In the late 1980s, the first tentative detections of brown dwarfs appeared.
+\citet{Becklin88} observed an object associated with the white dwarf GD\,165 which, from model isochrone
+fitting, they determined had a mass between 60 and 80 \mjup.
+From this single detection, although they did not confirm the object as a definitive brown dwarf,
+they concluded brown dwarfs must be common the galaxy.
+In 1989, \citet{Latham89} detected radial velocity variations around HD\,114762 which they attributed to
+a companion with $m \sin i = 11$ \mjup. 
+The authors declared the companion ``a probable brown dwarf'' but without a direct measurement of the
+orbital inclination were unable to definitively claim the object as substellar.
+
+The first definitive detections of brown dwarfs came in 1995, the same year as the first definitive exoplanet
+detection.
+\citet{Rebolo95} discovered a young brown dwarf in the Pleiades with a luminosity 0.1\% that of the Sun
+and effective temperature $2350 \pm 300$ K.
+The Pleiades is only $\sim$100 Myr old \citep{Basri96}, but even at that young age the brown dwarf has
+evolved into a spectral type of M8.5 and is too faint to be burning hydrogen, meaning it must be
+a brown dwarf.
+Later that year, \citet{Nakajima95} imaged an old brown dwarf, Gl\,229\,B, determining it has a temperature
+of 1200 K and must have a mass of 20-50 \mjup\ based on stellar evolution models.
+
+
+Brown dwarfs appear to be common: there may be as many as $0.02$ brown dwarfs per
+cubic parsec in the Solar neighborhood \citep{Reyle10},
+with the nearest only 2 pc from the Sun \citep{Luhman14}.
+The physics of star formation do not inhibit their formation.
+The stellar IMF peaks around 0.2 \msun, with lower-mass objects increasingly less common
+below that mass \citep{Chabrier03}.
+Objects for which the central density is sufficient for hydrogen burning, with masses larger than approximately 
+0.069 \msun\ (72 \mjup) are considered stars \citep{Zuckerman00}, while objects less massive than this
+boundary are considered brown dwarfs.
+
+
+On the high-mass end, the boundary between a star and a brown dwarf is clear.
+On the low-mass end, the separation between brown dwarfs and planets is 
+the subject of debate.
 Often, especially among observers, the boundary is based on the mass of the object.
 Objects larger than 13 \mjup, in which deuterium burning can occur in their core for
 at least a small fraction of their lifetime, are considered brown dwarfs.
-Objects for which conditions in the core are sufficient for hydrogen burning, at approximately 
-72 \mjup, are considered stars \citep{Zuckerman00}.
 This definition is the official definition of a brown dwarf from the International
 Astronomical Union.
 
-However, recent evidence suggests two formation pathways for 13-72 \mjup\ objects
+Recent evidence suggests two formation pathways for 13-72 \mjup\ objects
 \citep{Bayliss16}. 
 On the low-mass end, there is a population of transiting brown dwarfs in short orbital
 periods which may have formed via core accretion, like planets.
@@ -538,11 +633,13 @@ In the middle, there is a ``brown dwarf desert,'' with a paucity of 30-50 \mjup\
 binary systems.
 Some, especially theorists, have suggested a definition of brown dwarfs based on their
 formation, with all objects formed via core accretion called planets and all objects
-formed via gravitaitonal collapse (but below the hydrogen burning limit) brown dwarfs
+formed via gravitational collapse (but below the hydrogen burning limit) brown dwarfs
 \citep[e.g.][]{Chabrier14}.
 In this thesis, I will follow the IAU definition of a brown dwarf, noting that none of the
-claims presented within would be significantly affected by following the althernative
+claims presented within would be significantly affected by following the alternative
 definition.
+
+\subsection{Characterizing Brown Dwarfs}
 
 Many of the problems for M dwarfs outlined in this introduction are even worse for
 brown dwarfs.
@@ -550,7 +647,36 @@ Without active hydrogen burning, they can be significantly fainter than M dwarfs
 They cool and collapse in time, meaning their luminosity is continuously decreasing:
 they can be considered to be effectively PMS objects for longer than the age of the 
 universe \citep{Burrows01}.
+
+Very young brown dwarfs start their lives as M dwarfs, with effective temperatures between 2500 and
+3000 K \citep[See also Figure \ref{fig:burrows}]{Burrows97}.
+Low-mass stars will contract until they reach hydrostatic equilibrium on the main sequence, at which point
+their effective temperature is approximately constant. 
+Brown dwarfs never reach this point, continuing to contract, cool, and evolve through their 
+life.\footnote{In this case the ``late-type'' and ``early-type'' monikers are---purely by 
+accident---appropriate.}
+As brown dwarfs cool below approximately 2500 Kelvin, they enter the L dwarf class, which is defined by
+the presence of metal hydrides and alkali metals (such as FeH and Na I, respectively) in their 
+atmospheres \citep{Kirkpatrick99}.
+Below approximately 1200 Kelvin, brown dwarfs evolve into the T spectral class, which is defined through
+the presence of methane absorption bands in the near-IR.
+It is believed that L dwarfs have cloudy, opaque atmospheres while T dwarfs do not.
+The boundary between these two spectral classes, where the clouds dissipate, features large 
+photometric variability attributed to patchy clouds and a brightening of the brown dwarfs in $J$-band
+attributed to a change in the optical depth of the atmosphere \citep{Burgasser02b, Metchev15}
 Understanding the physical parameters of an individual brown dwarf requires an assessment of its age as well.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=.75\textwidth]{chapter1/burrows97.pdf}
+\caption[Brown dwarf temperature evolution in time]{Effective temperature vs.\ age of low-mass stars,
+brown dwarfs, and planet-mass objects, from \citet{Burrows97}. While all objects cool as they contract
+at young ages, stars will eventually hit the main sequence. Brown dwarfs continue to evolve throughout
+their lives, not reaching equilibrium until times significantly longer than the age of the universe.}
+\label{fig:burrows}
+\end{figure}
+
+
 
 Broadly speaking, there are two classes of brown dwarfs.
 Approximately two thousand brown dwarfs have been detected as single objects in the sky,
@@ -629,7 +755,7 @@ in a regime where they are untested, comparing the observed stellar masses to th
 predicted by theoretical evolutionary models.
 This thesis aims to probe each of these classes of companions.
 
-In Chapter \ref{chap:ttvs} I develop a new method to measure stellar and planetary 
+In Chapter \ref{chap:ttvs}, I develop a new method to measure stellar and planetary 
 parameters without any reliance on stellar models by combining RV and TTV observations
 of planetary systems.
 This method could be useful for systems of multiple transiting planets around M dwarfs,
@@ -637,14 +763,14 @@ where stellar models have relatively large uncertainties in their predictions of
 masses but multiple-planet systems are common.
 This work was originally published in Volume 762 of The Astrophysical Journal as \citet{Montet13}: ``Model-independent Stellar and Planetary Masses from Multi-transiting Exoplanetary Systems'' and has DOI 10.1088/0004-637X/762/2/112.
 
-In Chapter \ref{chap:trends} I study M dwarfs with long-term RV accelerations.
+In Chapter \ref{chap:trends}, I study M dwarfs with long-term RV accelerations.
 By targeting these systems in a direct imaging campaign, I am able to measure the
 occurrence rate of giant planets around M dwarfs over the range 0-20 AU, finding
 that $6.5\% \pm 3.0\%$ of M dwarfs host such a giant planet, with a strong dependence
 on stellar metallicity. This work was originally published in Volume 781 of The
 Astrophysical Journal as \citet{Montet14}: ``The TRENDS High-contrast Imaging Survey.\ IV. The Occurrence Rate of Giant Planets around M Dwarfs,'' and has DOI 10.1088/0004-637X/781/1/28.
 
-In Chapter \ref{chap:lhs1} I focus on LHS\,6343\,C, a brown dwarf transiting one member
+In Chapter \ref{chap:lhs1}, I focus on LHS\,6343\,C, a brown dwarf transiting one member
 of a widely-separated M+M binary. I analyze Keck/HIRES RV data and \kep\ photometry
 along with Palomar/TripleSpec spectroscopy of the host star 
 in order to measure the brown dwarf's mass and radius to 2\% precision, making it the
@@ -653,7 +779,7 @@ in Volume 800 of The Astrophysical Journal as \citet{Montet15a}: ``Characterizin
 and has DOI 10.1088/0004-637X/800/2/134.
 
 
-In Chapter \ref{chap:lhsspitz} I continue the focus on LHS\,6343\,C,
+In Chapter \ref{chap:lhsspitz}, I continue the focus on LHS\,6343\,C,
 analyzing data from the \spitz\ Space Telescope to detect and characterize secondary eclipses of the brown dwarf behind its host star.
 These observations make LHS\,6343\,C the only non-inflated brown dwarf with a known  mass and radius, to have its atmospheric properties directly measured. 
 This work was originally published in Volume 822 of The Astrophysical Journal Letters
@@ -661,7 +787,7 @@ as \citet{Montet16a}:
 ``Benchmark Transiting Brown Dwarf LHS\,6343\,C: Spitzer Secondary Eclipse Observations Yield Brightness Temperature and Mid-T Spectral Class,'' and has DOI
 10.3847/2041-8205/822/1/L6.
 
-In Chapter \ref{chap:Mbinaries} I focus on the young M dwarf binary 
+In Chapter \ref{chap:Mbinaries}, I focus on the young M dwarf binary 
 GJ\,3305\,AB, a young M+M binary in the $\beta$ Pictoris young moving group.
 The binary is in orbit around 51\,Eridani, a star with a precisely measured parallax and
 a directly imaged planetary-mass companion.
@@ -674,7 +800,7 @@ This work was originally published in Volume 813 of The Astrophysical Journal Le
 as \citet{Montet15c}: ``Dynamical Masses of Young M Dwarfs: Masses and Orbital Parameters of GJ\,3305\,AB, the Wide Binary Companion to the Imaged Exoplanet Host 51 Eri,''
 and has DOI 10.1088/2041-8205/813/1/L11.
 
-In Chapter \ref{chap:k2} I analyze data from the \KT\ mission.
+In Chapter \ref{chap:k2}, I analyze data from the \KT\ mission.
 I statistically validate 17 planets from Campaign 1 of the mission, creating the first
 catalog of confirmed transiting planets from \KT.
 One of these planets orbiting an M dwarf is a $2.23 \pm 0.25$ \rearth\ planet that receives
@@ -686,7 +812,7 @@ against similar size planets around M dwarfs in much shorter orbits, like GJ\,12
 This work was originally published in Volume 809 of The Astrophysical Journal
 as \citet{Montet15b}: ``Stellar and Planetary Properties of K2 Campaign 1 Candidates and Validation of 17 Planets, Including a Planet Receiving Earth-like Insolation,'' and has DOI 10.1088/0004-637X/809/1/25.
 
-In Chapter \ref{chap:wfirst} I consider the future \textit{WFIRST} mission, designed to target planets via the microlensing technique, as a transit search mission. I show
+In Chapter \ref{chap:wfirst}, I consider the future \textit{WFIRST} mission, designed to target planets via the microlensing technique, as a transit search mission. I show
 this mission will be able to detect as many as 30,000 transiting planets towards the
 galactic bulge and will enable a direct test of variations in planet occurrence 
 as a result of different conditions across the galaxy. 
@@ -695,5 +821,5 @@ sub-Neptune planets discovered by the mission will orbit M dwarfs.
 A version of this Chapter will be submitted
 to The Astrophysical Journal in the future.
 
-In Chapter \ref{chap:summary} we summarize our results and describe potential
+In Chapter \ref{chap:summary}, I summarize my results and describe potential
 future work to improve our understanding of low-mass stars and their companions. 
