@@ -11,7 +11,7 @@ of the spacecraft into the \KT\ mission, in which the telescope points at
 fields near the ecliptic plane for $\sim 75$ days at a time \citep{Howell14}.
 In this observing strategy, two axes of motion of the spacecraft are
 controlled by the two remaining reaction wheels, while the roll of the
-spacecraft is balanced with Solar radiation pressure and quasiperiodic
+spacecraft is balanced with solar radiation pressure and quasiperiodic
 thruster firing.
 As a result, the detector drifts relative to the sky
 at the rate of $\sim 1$ arcsec hr$^{-1}$, with rapid corrections due to thruster fires
@@ -28,7 +28,7 @@ masking the observational signature of a planet passing between \kep\ and its ho
 
 There has been considerable effort to recover these planetary signals, and to date six
 planets have been confirmed orbiting three stars in the \KT\ data
-\citep{Vanderburg15, Crossfield15, Armstrong15b}.
+\citep{Armstrong15b, Crossfield15, Vanderburg15}.
 What is common to all of these methods are that removal of systematics is considered a
 step to be undertaken before the search for planets.
 Under this strategy, it is implicitly assumed that the systematics are removed perfectly,
@@ -76,16 +76,16 @@ level.
 Additionally, we identify six systems as false positives.
 
 This paper is organized as follows.
-In \textsection2, we develop stellar properties through
+In Section 7.2, we develop stellar properties through
 photometric and spectroscopic data.
-In \textsection3, we combine the derived stellar properties with \KT\ data to infer planet
+In Section 7.3, we combine the derived stellar properties with \KT\ data to infer planet
 candidate properties.
-In \textsection4, we combine adaptive optics and radial velocity observations with both
+In Section 7.4, we combine adaptive optics and radial velocity observations with both
 archival and modern ground-based, seeing limited survey data and an analysis of the
 transit parameters to calculate false positive probabilities.
-In \textsection5, we discuss potentially interesting systems, including a mini-Neptune
+In Section 7.5, we discuss potentially interesting systems, including a mini-Neptune
 orbiting an M dwarf which receives a similar insolation to the Earth.
-In \textsection6, we summarize and discuss our results.
+In Section 7.6, we summarize and discuss our results.
 
 
 \section{Stellar Properties}
@@ -109,7 +109,7 @@ and in the remaining two cases, the photometric uncertainity in $W4$ is at least
 order of magnitude larger than those in $W1-W3$, so we do not use $W4$
 for any system.
 These data are reported in Table 7.1, and a color-color diagram showing the
-$r-J, J-K$ colors of our candidates is included as Fig.~\ref{fig:photometry}.
+$r-J, J-K$ colors of our candidates is included as Figure~\ref{fig:photometry}.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=0.75\textwidth]{chapter7/f1.pdf}}
@@ -152,7 +152,7 @@ $\boldsymbol{\theta}$ includes distance and extinction in addition
 to mass, age, and \feh.
 
 In this work, we use grids from the Dartmouth Stellar
-Evolution Database \citep{Dotter08} at Solar values of \afe=$0.0$ and
+Evolution Database \citep{Dotter08} at solar values of \afe=$0.0$ and
 helium abundance $Y=0.2741$, which come packaged with the \texttt{isochrones}
 module.
 We then infer the stellar parameters using \texttt{MULTINEST} \citep{Feroz09},
@@ -167,7 +167,7 @@ We include a prior on stellar metallicity representative of the observed metalli
 of stars within 1 kpc of the Sun, following the results of \citet{Hayden15}, and a Salpeter-slope
 prior on mass up to the maximum mass available in the model grids of $3.7$ $M_\odot$.
 
-During the sampling process, we fit for Galactic
+During the sampling process, we fit for galactic
 extinction as one of our physical parameters.
 We include the WISE bandpasses by applying the relative extinction values between
 SDSS, 2MASS, and WISE calculated by \citet{Davenport14}.
@@ -180,14 +180,14 @@ The NASA/IPAC Extragalactic Database (NED), which reports the
 \citet{Schlafly11} recalibration of the \citet{Schlegel98} extinction map as measured by
 COBE/DIRBE and IRAS/ISSA, suggests that typical $A_V$ extinction values to the edge
 of the galaxy at this
-high Galactic latitude are $\sim$0.1 magnitudes, so our upper limit appears to be justified.
+high galactic latitude are $\sim$0.1 magnitudes, so our upper limit appears to be justified.
 
 Such a scheme enables us to infer the statistical uncertainties on the
 mass, radius, and effective temperature.
 However, we are subject to biases induced by systematics in the models themselves.
 There is some evidence that the Dartmouth models may under-predict
-radii of M dwarfs by $\sim 15\%$ when compared to other methods \citep{Newton15,
-Montet15a}.
+radii of M dwarfs by $\sim 15\%$ when compared to other methods \citep{Montet15a,
+Newton15}.
 Such an effect may be the result of the Dartmouth model reliance on BT-Settl
 atmospheres, which are based on incomplete molecular line lists and
 have been shown to predict near-IR colors that are too blue
@@ -211,7 +211,7 @@ main sequence onto the subgiant branch, so that both the host stars and their
 planets are larger than previously reported.
 Similarly, in \KT\ \Ci\ we may expect to find evolved stars in a sample of planet
 candidates, although we may expect the effect to be lessened due to the
-high Galactic latitude of \Ci.
+high galactic latitude of \Ci.
 Indeed, we find this to be the case.
 Two stars, EPIC 201257461 and 201649426 are definitively evolved stars,
 with inferred masses less than 2 \msun but radii above 8 \rsun.
@@ -319,7 +319,7 @@ of results.
 
 In this analysis, we assume the dilution caused by additional stars
 contributing flux into the aperture is negligible for nearly all systems.
-Given the location of the \Ci\ field at a high Galactic latitude, we expect
+Given the location of the \Ci\ field at a high galactic latitude, we expect
 low contamination by background giants.
 Nevertheless, this assumption may not be valid for all systems.
 Any contamination unaccounted for, as may happen if any of these stars are
@@ -350,7 +350,7 @@ comprehensive follow-up of each individual candidate \citep{Morton11b}.
 \citet{Morton12} presented an automated method to calculate the
 probability that a planet candidate might be caused by an
 astrophysical false positive.
-This method uses Galactic population simulations to determine the
+This method uses galactic population simulations to determine the
 distributions of possible false positive scenarios, comparing the
 typical light curve shape of each to the data.
 It then combines this information with observationally motivated prior
@@ -381,15 +381,15 @@ Given the 6-arcsecond PSF of the \kep\ telescope, we allow for the possibility
 that companions falling just outside of our aperture (within one pixel) may
 contribute to the light curve, possibly causing a false positive event.
 The search for such companions is discussed in
-\textsection \ref{sec:background}.
+Section \ref{sec:background}.
 \item The maximum allowed depth of a potential secondary eclipse event
 is the most significantly detected signal at the same
 period of the planet candidate, once the primary transit is masked out
-(discussed in \textsection\ref{sec:sec}).
+(discussed in Section \ref{sec:sec}).
 \texttt{vespa} does not allow for the possibility of secondary eclipses
 larger than those observed in the \KT\ light curve for each star.
 \item Blended stars must be allowed by the available adaptive optics
-and archival imaging data (discussed in detail in \textsection
+and archival imaging data (discussed in detail in Section 
 \ref{sec:AO} and \ref{sec:background}).
 \texttt{vespa} only considers stars below the detection threshold for
 the AO imaging, which is a position-dependent value following a calculated
@@ -420,7 +420,7 @@ contamination by detected stellar companions within the photometric apertures
 
 This leaves 21 candidates that we statistically validate as planets, including
 four that have been previously
-identified in the literature \citep{Crossfield15, Armstrong15b}.
+identified in the literature \citep{Armstrong15b, Crossfield15}.
 So in total, of the 36 candidates, 21 are secure planets,
 17 of which we validate here for the first time.
 
@@ -577,7 +577,7 @@ detected in AO imaging.
 
 
 Unlike the original \kep\ field, the field for \KT\ \Ci\ is
-well out of the Galactic plane, so the rate of giant, distant background
+well out of the galactic plane, so the rate of giant, distant background
 stars is significantly lower.
 We include all potential contaminants in Table 7.4.
 We validate or eliminate each of these as a possibility based on the transit shape.
@@ -797,7 +797,7 @@ the eigen light curves.
 This overfit gives undue weight to eigen light curves that include the transits
 of EPIC 201569483, causing this spurious transit to occur.
 Again, we consider this system to be a false positive.
-As stated in \textsection 3, by including an empirical Gaussian
+As stated in Section 6.3, by including an empirical Gaussian
 prior on the weights for the eigen light curves in the linear systematics model,
 the signals observed on EPIC 201555883 and 201929294 are mitigated, suggesting
 such a scheme should be employed in searching for planet candidates in future
@@ -895,11 +895,11 @@ expected from the radius distributions measured from \kep\
 Unlike the original mission, however, we find that nearly all of our confirmed planets
 are around stars less massive than the Sun.
 This difference is a result of both the \Ci\ field and the target selection process.
-\Ci\ is at a significantly higher Galactic latitude than the original \kep\ mission,
+\Ci\ is at a significantly higher galactic latitude than the original \kep\ mission,
 meaning there is a much lower number density of targets at large distances.
 As massive stars
 at kiloparsec distances are relatively less likely to exist in \Ci\ than near the
-Galactic plane, the pool of targets that could be selected for \Ci\ contains a larger
+galactic plane, the pool of targets that could be selected for \Ci\ contains a larger
 fraction of subsolar stars.
 
 Low-mass stars, particularly M dwarfs, are also a specific focus of the \KT\ mission.
