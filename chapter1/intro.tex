@@ -1,4 +1,20 @@
 \section{The M Dwarf Spectral Class}
+For thousands of years, humans have studied stellar astronomy. 
+The ancient Greeks, especially Hipparchos, measured the brightness and position of hundreds 
+of stars.
+The ancient Egyptians used observations of stars, particularly Sirius and Thuban, to measure
+time for agricultural purposes.
+The ancient Chinese observed supernovae for divination purposes.
+Stars are one of the primary ways we can observe the universe. 
+On large scales, the galaxies we observe at high redshifts are made up of stars;
+on small scales, the asteroids we observe in our solar system are observable because they are
+reflecting light from our
+own sun.
+In these cases, we can only understand the astrophysical phenomena we observe because we 
+understand the starlight that creates these phenomena.
+
+Different stars are divided into different spectral classes based on their observable spectroscopic
+features.
 Type M dwarfs were a part of the original Draper Catalogue of Stellar Spectra \citep{Pickering90}, 
 classified as having weak but non-zero hydrogen absorption features in their spectra.
 The system was alphabetical: they were classified between K and O stars, 
@@ -11,50 +27,55 @@ stars and the least massive hydrogen burning stars in the galaxy.
 Today, the boundary between K and M dwarfs is defined by the presence of titanium oxide (TiO) bands in the
 atmospheres of M dwarfs \citep{Kuiper38, Morgan38}, which can form when a star's effective temperature is below approximately 3500 K.
 
-Often, we consider M dwarfs as a single, monolithic block.
-This view overlooks the incredible diversity in M dwarf physics.
+The single classification for M dwarfs can give the appearance of M dwarfs as a single, monolithic block.
+Indeed, this is largely true for other spectral types.
+The Sun has a radiative core, in which nuclear reactions are dominated by the p-p chain, and a convective 
+outer layer, which contributes to the existence of a magnetic field.
+The same is true for stars from the middle of the F spectral class through early M dwarfs.
+M dwarfs, meanwhile, have an incredible diversity.
 The M dwarf class spans an order of magnitude in mass, 
 an order of magnitude in radius, and
 a factor of 40 in luminosity \citep{Veeder74}.
 There are significant changes in the structure of the stars across this class as well.
 Below approximately 0.35 \msun, M dwarfs become fully convective, leading to a
 rapid decrease in the radius and luminosity of stars just below this boundary \citep{Chabrier97}.
-
 At the late edge of the M dwarf class are brown dwarfs, objects without high enough central densities to 
 fuse hydrogen. 
+
+In terms of their structure, F7 and K3 
+dwarfs have more in common than M0 and M9 dwarfs.
+Some of the stars even vary in time.
 As a brown dwarf leaves the T Tauri stage of stellar evolution it has a temperature of approximately 3000 K
 and a spectrum consistent with that of a mid-M dwarf.
 Brown dwarfs then cool and evolve into ``late-type'' L, T, and eventually Y dwarfs at a rate 
 which depends on their mass.
 I will discuss the evolution of brown dwarfs more fully in Section \ref{sec:BDs}.
-
-
-
-
-We can contrast the diversity in M dwarfs with the uniformity in Sunlike stars. 
-The Sun has a radiative core, in which nuclear reactions are dominated by the p-p chain, and a convective 
-outer layer, which contributes to the existence of a magnetic field.
-The same is true for all main-sequence stars from the middle of the F spectral class through early M dwarfs: 
-in terms of their structure, F7 and K3 
-dwarfs have more in common than M0 and M9 dwarfs.
 If the abundance of M dwarfs and the diversity of their structure had been understood at the time of the development 
 of the Harvard stellar classification system, it is possible that these stars would have been awarded more than a 
 single spectral type.
 
 
+
+
+
+
 \section{M Dwarfs: The Silent Majority}
-The first spectrum of an M dwarf was obtained only 100 years ago when 
-\citet{Adams13} collected an observation of the M+M binary Groombridge 34.\footnote{The
+The early work on stellar spectroscopic classification of type M stars is based on
+spectroscopy of M giants. 
+The
 Draper catalogue was first published in 1890 and the
-Harvard stellar classification scheme in 1901. 
-All of the early work in stellar spectroscopic classification of M dwarfs is based on
-spectroscopy of M giants: there were no main sequence stars used to create the stellar class in which 
-75\% of main sequence stars reside.}
+Harvard stellar classification scheme in 1901,
+but 
+the first spectrum of an M dwarf was obtained only 100 years ago when 
+\citet{Adams13} collected an observation of the M+M binary Groombridge 34.
+This 8th magnitude star was known to be peculiar relative to the M stars with known spectra because of its 
+high proper motion of 3 arcseconds per year; today we know it is within 4 parsec of the Sun.
 
 The oldest known surviving diagram plotting stellar absolute magnitude against spectral type \citep{Russell14}, now known as a Hertsprung-Russell Diagram, includes hundreds of stars, as shown in Figure \ref{fig:HR}.
 Today we know that M dwarfs make up approximately 75\% of the stars in the galaxy,
 yet only $\sim$5\% of the stars included in Russell's figure are listed as
-spectral type M.
+spectral type M. These stars are absent in the original work because they are
+intrinsically faint.
 
 
 
@@ -68,8 +89,8 @@ maps approximately to stellar effective temperature.}
 \label{fig:HR}
 \end{figure}
 
-The lack of M dwarfs included in these early studies stems from the physics
-of M dwarfs themselves, specifically the stellar mass-luminosity relation.
+The faintness of M dwarfs is the result of the physics of their interior, 
+specifically the stellar mass-luminosity relation.
 To show this, let us begin with the equations of stellar structure.
 The first of these declares a star is in hydrostatic equilibrium:
 \begin{equation}
@@ -148,12 +169,32 @@ This manipulation yields
 \end{equation}
 which if we consider the case where we have an ideal, fully ionized gas so that $\gamma = 5/3$ and energy generation dominated by the p-p chain so that $\nu = 4$, we find
 \begin{equation}
-\log L \approx 8.33 \log M
+\log L \approx 8.33 \log M + \textrm{const},
 \end{equation}
 or $L \propto M^{8.33}$! Thus, if we decrease the mass of a fully convective star by a factor of two, 
 we also decrease its luminosity by a factor of 320!\footnote{The same manipulation,
 considering the case of radiative transport, leads to the relation $L~\propto~M^{5.5}$,
 similar to what is observed for Sunlike stars.} 
+
+We can take a similar approach to understand the relation between the mass and temperature of low-mass stars.
+We know that
+\begin{equation}
+L = 4 \pi R^2 \sigma T^4,
+\end{equation}
+so that
+\begin{equation}
+\log L = 2 \log R + 4 \log T + \textrm{const.}
+\end{equation}
+With equations 1.9 and 1.10, we can find a relation between the log of the star's mass and its temperature:
+\begin{equation}
+4 \log T =  \bigg(\frac{2(\nu + 1) - \gamma(2\nu + 3)}{4 - 3\gamma}\bigg) \log M - 2 \bigg(\frac{2-\gamma}{4 - 3\gamma}\bigg) \log M + \textrm{const.}
+\end{equation}
+Again we consider the case where we have an ideal, ionized gas and energy generation dominated by the p-p chain, so that
+$\gamma = 5/3$ and $\nu = 4$.
+In this case, $\log T \approx 0.44 \log M$, so $T \propto M^{0.44}$. 
+M dwarfs, with effective temperatures around 3,000 Kelvin, have significant molecular absorption in their atmospheres,
+complicating their analysis even further.
+
 
 Even worse for optical observing,
 the peak of the SED of a typical 3,000 K M dwarf peaks at 1 micron, well into the infrared, making them even fainter in the optical.
@@ -237,7 +278,13 @@ With a full spectrum of spectral lines to consider, the RV of the star can be
 measured to 2-5 m s$^{-1}$ depending on the instrument.
 At this level, systematic effects induced by the instrument can dominate over any planetary
 signal: in the typical mode used for planet searches,
-the resolution of Keck/HIRES is 48,000, leading to a pixel scale of 6.2 km s$^{-1}$ pixel$^{-1}$.
+the resolution of Keck/HIRES is 55,000, leading to a pixel scale of 5.5 km s$^{-1}$ pixel$^{-1}$.
+
+To measure precise RVs, both the pixel scale and a precise wavelength calibration must be
+known, at a level much smaller than a single pixel.
+During a night, the shape of the instrumental profile of the detector can change, leading to 
+changes in the wavelength calibration considerably larger than the planetary signals
+targeted.
 To combat this, one of two approaches are taken.
 At Keck/HIRES, observers place an iodine cell in the light path before the starlight
 enters the instrument itself \citep{Butler96}.
@@ -247,15 +294,17 @@ signal.
 The iodine also provides information about the shape of the instrumental profile during
 each observation.
 At other telescopes, including HARPS, the spectrograph slit is replaced with a fiber,
-and the instrument is placed in a temperature and pressure controlled enclosure, so that
-the environment or motion of the telescope does not affect the wavelength zeropoint or
-instrumental profile.
+and the instrument is placed in a temperature and pressure controlled enclosure to keep
+the instrumental profile consistent. 
+Simultaneously with the observations of the stellar spectrum, a Thorium-Argon lamp is observed
+which serves the same purposes as the iodine cell, providing a simultaneous wavelength
+reference.
 
 
 \subsection{History of RV Searches}
 The first radial velocity (RV) planet searches focused almost exclusively on Sunlike
 (FGK) stars, a reasonable choice as these are the brightest main sequence stars for 
-which magnetic braking occurs, leading to slow rotation.
+which magnetic braking occurs, leading to slow rotation \citep{Wright04}.
 
 The first planet detected around a main sequence star other than the Sun was discovered
 in 1995 with the detection of 51\,Pegasi\,b, a planet with an orbital period of 4.23 days
@@ -276,7 +325,9 @@ Bowler10, Johnson11b}.
 
 M dwarfs have many narrow spectral features and make ideal planet search targets as
 long as they are near enough to be observable.
-Nearly immediately, researchers detected giant planets around M dwarfs \citep{Butler04, Butler06}, but the occurrence rate of giant planets around M dwarfs was found to be 
+Indeed, the 13th planet discovered via RVs was a 2.3 \mjup\ planet in a 61-day orbit around GJ\,876  
+\citep{Delfosse98, Marcy98}.
+Researches detected more giant planets around M dwarfs \citep{Butler04, Butler06}, but the occurrence rate of giant planets around M dwarfs was found to be 
 considerably lower than around higher mass stars.
 Only $\approx 3\%$ of M dwarfs host a planet at least as massive as Jupiter 
 within 2.5 AU \citep{Johnson10a, Bonfils13}.
@@ -339,6 +390,7 @@ flux from the star.
 The size of this decrement, $\delta$, corresponds to the fractional area of the star's disk blocked by the planet:
 \begin{equation}
 \delta = \bigg(\frac{R_p}{R_*}\bigg)^2.
+\label{eq:trans}
 \end{equation}
 Again, we find that we must understand the star's parameters (in this case, the radius)
 in order to understand the planetary parameters.
@@ -452,7 +504,9 @@ I discuss in Chapter~\ref{chap:wfirst}.
 Transit surveys discovered 45 more planets between these initial discoveries and 2009, largely through dedicated surveys such as the Super-Wide Angle Search for Planets \citep[SuperWASP,][]{Street03}, the Hungarian Automated Telescope Network 
 \citep[HATNet,][]{Bakos02}, and
 Convection Rotation et Transits plan\'{e}taires \citep[CoRoT,][]{Auvergne09}.
-These planets were largely giant planets in short periods, similar to the early hot Jupiters
+These surveys continue today, and others, such as MEarth \citep{Nutzman08} are singularly 
+focused on the search for planets around M dwarfs.
+The planets detected by these surveys have been largely giant planets in short periods, similar to the early hot Jupiters
 detected by RV surveys. 
 
 In 2009, the \kep\ mission \citep{Borucki10} was launched and began taking data.
@@ -511,14 +565,16 @@ if we can confirm planets and characterize their host stars with data from the t
 \section{Understanding M Dwarfs}
 One of the other downsides of studying companions to M dwarfs is the difficulty 
 in inferring stellar parameters.
-For both RV-detected and transiting planets, the measured quantity of interest 
+As can be plainly seen from Equations \ref{eq:rv} and \ref{eq:trans},
+for both RV-detected and transiting planets, the measured quantity of interest 
 (the Doppler amplitude and transit depth) are a function of both planetary and stellar
 parameters. 
 In both cases, we are only able to understand the planet if we understand its host star:
 precision planetary astronomy requires precision stellar astronomy.
 
+
 For solar-type stars, we are able to infer stellar parameters at the few percent level
-through well-tested relationships between absolute magnitude and stellar parameters
+through evolutionary models which motivate well-tested relationships between absolute magnitude and stellar parameters
 \citep{Andersen91, Casagrande10}.
 This is largely possible due to an excellent calibration source located 1 AU away from the 
 Earth.
